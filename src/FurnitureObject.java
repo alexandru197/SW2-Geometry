@@ -17,8 +17,8 @@ public class FurnitureObject extends Shape{
         for (Point point : coordinates) {
             double x = point.x;
             double y = point.y;
-            point.x = (x * cos) - (y * sin);
-            point.y = (x * sin) + (y * cos);
+            point.x = (x * cos) + (y * sin);
+            point.y = -(x * sin) + (y * cos);
         }
     }
 
