@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
@@ -29,9 +27,22 @@ public class Parse {
         return everything;
     }
 
+
+
+
     public static void parseFile(){
         String myString = new String();
         Parse p = new Parse();
+
+
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("/Users/alexandrubondor/Desktop/SW2visualiser/index.html", "UTF-8");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
 
         try {
             myString = p.readFile();
@@ -43,10 +54,23 @@ public class Parse {
         String myString1 = myString.replace(s1 ,"");
 
         s1 = s1.substring(0, s1.length() - 2);
-//        System.out.println("Camera este : " +s1);
 
-//      STRUCTURE   var p1 = b1.create('point', [10, 10], {name:'',size:0});
-
+        writer.println("<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "<title>Visualiser</title>\n" +
+                "<link rel=\"stylesheet\" type=\"text/css\" href=\"jsxgraph.css\" />\n" +
+                "<script type=\"text/javascript\" src=\"jsxgraphcore.js\"></script>\n" +
+                "</head>\n" +
+                "<body onload=\"myFunction()\">\n" +
+                "\n" +
+                "<jsxgraph box=\"jxgbox\" width=\"1000\" height=\"1000\" ></jsxgraph>\n" +
+                "\n" +
+                "<script>\n" +
+                "        function myFunction() {\n" +
+                "            // var b1 = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-4, 2, 6, -4]});\n" +
+                "            var b1 = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-10, 90, 90, -10], axis:true});\n" +
+                "            ");
         int points = 1;
         int number = 0;
         int j = 0;
@@ -56,6 +80,8 @@ public class Parse {
         double max = 0;
         Double y = 0.0;
         Double x;
+        double roomHeight = 0;
+        double height = 0;
         while(j < s1.length()){
             s2 = "";
             if(Character.isDigit(s1.charAt(j)) || s1.charAt(j) == '-') {
@@ -75,32 +101,43 @@ public class Parse {
                     if (Double.compare(x, max) > 0) {
                         max = x;
                     }
-                    System.out.println("var p" + number/2 + " = b1.create('point', [" + x + ", " + y + "], {name:'',size:0});");
+                    if (Double.compare(y, roomHeight) > 0) {
+                        roomHeight = y;
+                    }
+
+                    writer.println("var p" + number/2 + " = b1.create('point', [" + x + ", " + y + "], {name:'',size:0});");
                 }
             }
             else j++;
 
         }
-        System.out.print("var camera = b1.create('polygon',[");
+        writer.print("var camera = b1.create('polygon',[");
         for(int k = 1; k <= number/2; ++k){
-            if(k < number/2) System.out.print("p" + k + ",");
-            else System.out.print("p" + k);
+            if(k < number/2) writer.print("p" + k + ",");
+            else writer.print("p" + k);
         }
-        System.out.print("], {fillColor: \"red\"});");
-        System.out.println("");
+        writer.print("], {fillColor: \"red\"});");
+        writer.println("");
+        writer.println("var object;");
 
         Room room = new Room(coordinates);
+        ///////////////
 
 
         int i=0;
         sumX += max + 1;
         s1 = myString1.substring(0, 3);
         myString1 = myString1.replace(s1 ,"");
+        double min = 0;
+        int obj = 0;
         for (String val: myString1.split(";")){
-            System.out.println("");
-            System.out.println("");
-            System.out.println("");
+            coordinates = new ArrayList<Point>();
+            obj++;
+            writer.println("");
+            writer.println("");
+            writer.println("");
             max = 0;
+            min = 0;
             y = 0.0;
             x = 0.0;
             j = 2;
@@ -124,32 +161,66 @@ public class Parse {
                         if (Double.compare(x, max) > 0) {
                             max = x;
                         }
-                             System.out.println("p" + number/2 + " = b1.create('point', [" + (x+2*sumX) + ", " + y + "], {name:'',size:0});");
+
+                        if (Double.compare(x, min) < 0) {
+                            min = x;
+                        }
+
+                        if(x < 0) {
+                            height += roomHeight + 2;
+                            sumX = roomHeight;
+                        }
                     }
                 }
                 else j++;
 
+
             }
-            sumX += max + 1;
-            System.out.print("object = b1.create('polygon',[");
+            if(obj % 10 == 0) {
+                height += roomHeight + 2;
+                sumX = roomHeight;
+            }
+            sumX += (max + min) + 2;
+
+            for(int k = 0; k < number/2; k++){
+                writer.println("p" + (k+1) + " = b1.create('point', [" + (coordinates.get(k).x+sumX) + ", " + (coordinates.get(k).y + height)  + "], {name:'',size:0});");
+                if(Double.compare(coordinates.get(k).x+sumX, max) > 0)
+                    max = coordinates.get(k).x+sumX;
+            }
+
+            sumX = max;
+            writer.print("object = b1.create('polygon',[");
             for(int k = 1; k <= number/2; ++k){
-                if(k < number/2) System.out.print("p" + k + ",");
-                else System.out.print("p" + k);
+                if(k < number/2) writer.print("p" + k + ",");
+                else writer.print("p" + k);
             }
-            System.out.print("], {fillColor: \"green\"});");
-            System.out.println("");
+            writer.print("], {fillColor: \"green\"});");
+            writer.println("");
 
             FurnitureObject furniture = new FurnitureObject(coordinates);
 
 
 
-            // System.out.println(val);
+            // writer.println(val);
         }
 
 
-        System.out.println("");
+        writer.println(" }\n" +
+                "       \n" +
+                "    </script>\n" +
+                "\n" +
+                "<div id=\"jxgbox\" class=\"jxgbox\" style=\"height: 98vh; width: 98vh;\"></div>\n" +
+                "\n" +
+                "</body>\n" +
+                "</html>");
+        
+        writer.close();
+
 
     }
+
+
+
 }
 
 
