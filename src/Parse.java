@@ -10,7 +10,7 @@ public class Parse {
 
 
     public static String readFile () throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("./input.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("problem26.txt"));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         String everything = new String();
@@ -40,7 +40,8 @@ public class Parse {
 
         PrintWriter writer = null;
         try {
-            writer = new PrintWriter("/Users/alexandrubondor/Desktop/SW2visualiser/index.html", "UTF-8");
+            writer = new PrintWriter("./visualisation/index.html", "UTF-8");
+           // writer = new PrintWriter("output.txt", "UTF-8");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
@@ -107,7 +108,7 @@ public class Parse {
                     if (Double.compare(y, roomHeight) > 0) {
                         roomHeight = y;
                     }
-
+                    System.out.println("var p" + number/2 + " = b1.create('point', [" + x + ", " + y + "], {name:'',size:0});");
                     writer.println("var p" + number/2 + " = b1.create('point', [" + x + ", " + y + "], {name:'',size:0});");
                 }
             }
