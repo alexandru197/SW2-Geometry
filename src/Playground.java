@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -8,7 +9,7 @@ public class Playground {
         Utility utility = new Utility();
         double a = 0.7071067811865476;
         double b = 0.707106781;
-        if (utility.epsilonEquality(a,b)) System.out.println("egale"); else System.out.println("inegale");
+//        if (utility.epsilonEquality(a,b)) System.out.println("egale"); else System.out.println("inegale");
 
         Point point1 = new Point(a,b);
         Point point2 = new Point(b,a);
@@ -16,8 +17,9 @@ public class Playground {
         coordinates.add(point1);
         coordinates.add(point2);
         Shape room = new Room(coordinates);
-        room.displayCoordinates();
+//        room.displayCoordinates();
         System.out.println();
+<<<<<<< HEAD
         if (point1.isEqualToPair(point2)) System.out.println("perechile sunt egale"); else System.out.println("perechile sunt inegale");
         FurnitureObject square = new FurnitureObject(coordinates,1);
 
@@ -29,6 +31,15 @@ public class Playground {
             System.out.println("Nu sunt coliniare");
         if (point1.linesIntersect(point3,point4,point5,point6)) System.out.println("Liniile se intersecteeaza"); else
             System.out.println("Liniile nu se intersecteaza");
+=======
+//        if (point1.isEqualToPair(point2)) System.out.println("perechile sunt egale"); else System.out.println("perechile sunt inegale");
+        FurnitureObject square = new FurnitureObject(coordinates);
+
+        Parse output = new Parse();
+        output.parseFile();
+
+
+>>>>>>> 587bc3f03703f67359ee8d7c2df93be4180d8361
     }
 
 }
