@@ -7,8 +7,10 @@ import java.util.ArrayList;
  */
 public class FurnitureObject extends Shape{
     private ArrayList<Pair> coordinates = new ArrayList<Pair>();
+    public int unitCost;
     public FurnitureObject(ArrayList<Point> coordinates) {
         super(coordinates);
+        this.unitCost = unitCost;
     }
 
     public void rotate(double degrees) {
