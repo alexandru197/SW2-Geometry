@@ -22,7 +22,7 @@ public abstract class Shape {
         Iterator iterator = coordinates.iterator();
         while (iterator.hasNext()) {
             Point point = (Point) iterator.next();
-            System.out.print("("+ point.x+", "+ point.y+")");
+            System.out.printf("("+ "%.00000000f"+", "+"%.00000000f"+")",point.x,point.y);
             if (iterator.hasNext()) System.out.print(", "); else System.out.print("; ");
         }
     }

@@ -11,12 +11,14 @@ public class FurnitureObject extends Shape{
     }
 
     public void rotate(double degrees) {
-        //double radians = (degrees * Math.PI) / 180.0;
-        double cos = Math.cos(degrees);
-        double sin = Math.sin(degrees);
+        double radians = (degrees * Math.PI) / (double) 180;
+        double cos = Math.cos(radians);
+        double sin = Math.sin(radians);
         for (Point point : coordinates) {
-            point.x = (point.x * cos) - (point.y * sin);
-            point.y = (point.x * sin) + (point.y * cos);
+            double x = point.x;
+            double y = point.y;
+            point.x = (x * cos) - (y * sin);
+            point.y = (x * sin) + (y * cos);
         }
     }
 

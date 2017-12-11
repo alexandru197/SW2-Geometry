@@ -6,19 +6,18 @@ import java.util.ArrayList;
 public class Playground {
     public static void main (String[] args) {
 
-        Point point3 = new Point(1,2);
-        Point point4 = new Point(4,2);
-        Point point5 = new Point(4,3);
-        Point point6 = new Point(1,3);
+        Point point3 = new Point(0,0);
+        Point point4 = new Point(0,2);
+        Point point5 = new Point(1,1);
+//        Point point6 = new Point(1,-1);
         ArrayList<Point> coordinates = new ArrayList<Point>();
         coordinates.add(point3);
         coordinates.add(point4);
         coordinates.add(point5);
-        coordinates.add(point6);
+//        coordinates.add(point6);
         FurnitureObject furnitureObject = new FurnitureObject(coordinates,1);
-        furnitureObject.translate(-1,-2);
         furnitureObject.displayCoordinates();
-        furnitureObject.rotate(360);
+        furnitureObject.rotate(90);
         System.out.println();
         furnitureObject.displayCoordinates();
 
