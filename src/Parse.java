@@ -1,7 +1,10 @@
+
 import java.io.*;
 import java.lang.reflect.Array;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 public class Parse {
 
@@ -197,7 +200,7 @@ public class Parse {
             writer.print("], {fillColor: \"green\"});");
             writer.println("");
 
-            FurnitureObject furniture = new FurnitureObject(coordinates);
+            //FurnitureObject furniture = new FurnitureObject(coordinates);
 
 
 
