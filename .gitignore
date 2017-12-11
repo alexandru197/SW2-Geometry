@@ -1,0 +1,15 @@
+#Entire content of "out" directories
+out/
+
+#Entire content of ".idea" directories
+.idea/
+.idea
+
+#Log file
+*.log
+
+#Workspace.xml
+*.xml
+
+#IntelliJ related
+*.iml
