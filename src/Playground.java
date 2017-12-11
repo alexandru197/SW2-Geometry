@@ -19,8 +19,16 @@ public class Playground {
         room.displayCoordinates();
         System.out.println();
         if (point1.isEqualToPair(point2)) System.out.println("perechile sunt egale"); else System.out.println("perechile sunt inegale");
-        FurnitureObject square = new FurnitureObject(coordinates);
+        FurnitureObject square = new FurnitureObject(coordinates,1);
 
+        Point point3 = new Point(2,1);
+        Point point4 = new Point(4,1);
+        Point point5 = new Point(1,1);
+        Point point6 = new Point(4,2);
+        if (point1.pointsAreCollinear(point3,point4,point5)) System.out.println("Sunt coliniare"); else
+            System.out.println("Nu sunt coliniare");
+        if (point1.linesIntersect(point3,point4,point5,point6)) System.out.println("Liniile se intersecteeaza"); else
+            System.out.println("Liniile nu se intersecteaza");
     }
 
 }
