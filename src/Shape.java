@@ -6,9 +6,9 @@ import java.util.Iterator;
  */
 public abstract class Shape {
 
-    private ArrayList<Pair> coordinates = new ArrayList<Pair>();
+    private ArrayList<Point> coordinates = new ArrayList<Point>();
 
-    public Shape(ArrayList<Pair> coordinates) {
+    public Shape(ArrayList<Point> coordinates) {
         this.coordinates = coordinates;
     }
 
@@ -17,15 +17,15 @@ public abstract class Shape {
         return surface;
     }
 
-    public ArrayList<Pair> getCoordinates() {
+    public ArrayList<Point> getCoordinates() {
         return coordinates;
     }
 
     public void displayCoordinates() {
         Iterator iterator = coordinates.iterator();
         while (iterator.hasNext()) {
-            Pair pair = (Pair) iterator.next();
-            System.out.print("("+pair.getX()+", "+pair.getY()+")");
+            Point point = (Point) iterator.next();
+            System.out.print("("+ point.getX()+", "+ point.getY()+")");
             if (iterator.hasNext()) System.out.print(", "); else System.out.print("; ");
         }
     }
