@@ -17,7 +17,7 @@ public class Playground {
         coordinates.add(point6);
         FurnitureObject furnitureObject = new FurnitureObject(coordinates,1);
         furnitureObject.displayCoordinates();
-        furnitureObject.rotate(90);
+        furnitureObject.rotate(36);
         System.out.println();
         furnitureObject.displayCoordinates();
 

@@ -14,12 +14,16 @@ public class FurnitureObject extends Shape{
         double radians = (degrees * Math.PI) / (double) 180;
         double cos = Math.cos(radians);
         double sin = Math.sin(radians);
+        double xTranslate = coordinates.get(0).x;
+        double yTranslate = coordinates.get(0).y;
+        translate(-xTranslate,-yTranslate);
         for (Point point : coordinates) {
             double x = point.x;
             double y = point.y;
             point.x = (x * cos) + (y * sin);
             point.y = -(x * sin) + (y * cos);
         }
+        translate(xTranslate,yTranslate);
     }
 
     public void translateX(double xAmount) {
