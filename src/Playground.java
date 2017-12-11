@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -6,40 +5,23 @@ import java.util.ArrayList;
  */
 public class Playground {
     public static void main (String[] args) {
-        Utility utility = new Utility();
-        double a = 0.7071067811865476;
-        double b = 0.707106781;
-//        if (utility.epsilonEquality(a,b)) System.out.println("egale"); else System.out.println("inegale");
 
-        Point point1 = new Point(a,b);
-        Point point2 = new Point(b,a);
+        Point point3 = new Point(1,2);
+        Point point4 = new Point(4,2);
+        Point point5 = new Point(4,3);
+        Point point6 = new Point(1,3);
         ArrayList<Point> coordinates = new ArrayList<Point>();
-        coordinates.add(point1);
-        coordinates.add(point2);
-        Shape room = new Room(coordinates);
-//        room.displayCoordinates();
+        coordinates.add(point3);
+        coordinates.add(point4);
+        coordinates.add(point5);
+        coordinates.add(point6);
+        FurnitureObject furnitureObject = new FurnitureObject(coordinates,1);
+        furnitureObject.translate(-1,-2);
+        furnitureObject.displayCoordinates();
+        furnitureObject.rotate(360);
         System.out.println();
-<<<<<<< HEAD
-        if (point1.isEqualToPair(point2)) System.out.println("perechile sunt egale"); else System.out.println("perechile sunt inegale");
-        FurnitureObject square = new FurnitureObject(coordinates,1);
+        furnitureObject.displayCoordinates();
 
-        Point point3 = new Point(2,1);
-        Point point4 = new Point(4,1);
-        Point point5 = new Point(1,1);
-        Point point6 = new Point(4,2);
-        if (point1.pointsAreCollinear(point3,point4,point5)) System.out.println("Sunt coliniare"); else
-            System.out.println("Nu sunt coliniare");
-        if (point1.linesIntersect(point3,point4,point5,point6)) System.out.println("Liniile se intersecteeaza"); else
-            System.out.println("Liniile nu se intersecteaza");
-=======
-//        if (point1.isEqualToPair(point2)) System.out.println("perechile sunt egale"); else System.out.println("perechile sunt inegale");
-        FurnitureObject square = new FurnitureObject(coordinates);
-
-        Parse output = new Parse();
-        output.parseFile();
-
-
->>>>>>> 587bc3f03703f67359ee8d7c2df93be4180d8361
     }
 
 }
