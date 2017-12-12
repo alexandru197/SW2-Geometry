@@ -42,4 +42,11 @@ public class FurnitureObject extends Shape{
         translateX(xAmount);
         translateY(yAmount);
     }
+
+    public boolean isInsideRoom (Room room) {
+        for (Point point : coordinates) {
+            if (!point.isInsideShape(room)) return false;
+        }
+        return true;
+    }
 }

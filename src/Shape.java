@@ -34,6 +34,10 @@ public abstract class Shape {
         return Math.abs(area);
     }
 
+    public boolean collidesShape(Shape shape) {
+        return true;
+    }
+
 
     public void displayCoordinates() {
         Iterator iterator = coordinates.iterator();
