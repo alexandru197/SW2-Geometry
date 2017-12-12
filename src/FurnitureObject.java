@@ -5,9 +5,13 @@ import java.util.ArrayList;
  */
 public class FurnitureObject extends Shape{
     public int unitCost;
+    public double area;
+    public double totalCost;
     public FurnitureObject(ArrayList<Point> coordinates, int unitCost) {
         super(coordinates);
         this.unitCost = unitCost;
+        this.area = area();
+        this.totalCost = getTotalCost();
     }
 
     public void rotate(double degrees) {
@@ -51,7 +55,14 @@ public class FurnitureObject extends Shape{
     }
 
     public double getTotalCost(){
-        double totalCost = this.unitCost * this.area();
+        double totalCost = this.unitCost * this.area;
         return totalCost;
+    }
+
+    public boolean collidesWithFurnitureInRoom(ArrayList<FurnitureObject> furnitureInRoom) {
+        for (FurnitureObject furnitureObject : furnitureInRoom) {
+            if (this.collidesShape(furnitureObject)) return true;
+        }
+        return false;
     }
 }

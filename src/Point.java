@@ -33,7 +33,7 @@ public class Point extends Object{
         return counterClockwiseTurn(a, b, c) == 0;
     }
 
-    public static boolean linesDefinesByFourPointsIntersect(Point line1StartPoint, Point line1EndPoint, Point line2StartPoint, Point line2EndPoint) {
+    public static boolean linesDefinedByFourPointsIntersect(Point line1StartPoint, Point line1EndPoint, Point line2StartPoint, Point line2EndPoint) {
         int test1, test2;
         test1 = Point.counterClockwiseTurn(line1StartPoint,line1EndPoint,line2StartPoint) *
                 Point.counterClockwiseTurn(line1StartPoint,line1EndPoint,line2EndPoint);
