@@ -12,9 +12,26 @@ public abstract class Shape {
         this.coordinates = coordinates;
     }
 
-    public double surface() {
-        double surface = 0;
-        return surface;
+    public double originDeterminant(Point a, Point b) {
+        return (a.x * b.y - b.x * a.y);
+    }
+
+    public double area() {
+        double area = 0;
+        boolean passedFirstPoint = false;
+        Point lastPoint = null;
+        for (Point point : coordinates) {
+            if (passedFirstPoint == false) {
+                passedFirstPoint = true;
+            }
+            else {
+                area += originDeterminant(point,lastPoint)/2;
+            }
+            lastPoint = point;
+        }
+        Point point = coordinates.get(0);
+        area += originDeterminant(point,lastPoint)/2;
+        return Math.abs(area);
     }
 
 

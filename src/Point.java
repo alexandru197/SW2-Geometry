@@ -41,4 +41,28 @@ public class Point extends Object{
                 Point.counterClockwiseTurn(line2StartPoint,line2EndPoint,line1EndPoint);
         return (test1 <= 0) && (test2 <= 0);
     }
+
+    public static double determinant (Point a, Point b, Point c) {
+        return (a.x * b.y - a.x * c.y + b.x * c.y - b.x * a.y + c.x * a.y - c.x * b.y);
+    }
+
+    public boolean isInsideShape(Shape shape) {
+        boolean passedFirstPoint = false;
+        Point lastPoint = null;
+        int crossings = 0;
+        for (Point point : shape.coordinates) {
+            if (passedFirstPoint == false) {
+                passedFirstPoint = true;
+            }
+            else {
+                double slope = (point.y - lastPoint.y) / (point.x - lastPoint.x);
+                boolean cond1 = (lastPoint.x <= this.x) && (this.x < point.x);
+                boolean cond2 = (point.x <= this.x) && (this.x < lastPoint.x);
+                boolean above = (this.y < slope * (this.x - lastPoint.x) + lastPoint.y);
+                if ((cond1 || cond2) && above) crossings++;
+            }
+            lastPoint = point;
+        }
+        return (crossings % 2 != 0);
+    }
 }
