@@ -16,12 +16,21 @@ public class Playground {
         coordinates.add(point5);
         coordinates.add(point6);
         FurnitureObject furnitureObject = new FurnitureObject(coordinates,1);
-      //  furnitureObject.displayCoordinates();
-       // furnitureObject.rotate(36);
         System.out.println();
         Parse parse = new Parse();
         parse.parseFile();
-       // furnitureObject.displayCoordinates();
+        furnitureObject.displayCoordinates();
+        System.out.println();
+        System.out.printf("Area = %.9f",furnitureObject.area());
+        furnitureObject.rotate(36);
+        System.out.println();
+        furnitureObject.displayCoordinates();
+        System.out.println();
+        System.out.printf("Area = %.9f",furnitureObject.area());
+
+        System.out.println();
+        Point point1 = new Point(2,2.7);
+        if (point1.isInsideShape(furnitureObject)) System.out.println("Is inside"); else System.out.println("not inside");
 
     }
 
