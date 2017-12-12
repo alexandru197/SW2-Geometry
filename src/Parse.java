@@ -1,16 +1,12 @@
 
 import java.io.*;
-import java.lang.reflect.Array;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Parse {
 
 
     public static String readFile () throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("problem26.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("Problems/problem26.txt"));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         String everything = new String();
