@@ -108,7 +108,7 @@ public class Parse {
                     if (Double.compare(y, roomHeight) > 0) {
                         roomHeight = y;
                     }
-                    System.out.println("var p" + number/2 + " = b1.create('point', [" + x + ", " + y + "], {name:'',size:0});");
+                    //System.out.println("var p" + number/2 + " = b1.create('point', [" + x + ", " + y + "], {name:'',size:0});");
                     writer.println("var p" + number/2 + " = b1.create('point', [" + x + ", " + y + "], {name:'',size:0});");
                 }
             }
@@ -120,7 +120,7 @@ public class Parse {
             if(k < number/2) writer.print("p" + k + ",");
             else writer.print("p" + k);
         }
-        writer.print("], {fillColor: \"red\"});");
+        writer.print("], {fillColor: \"red\",  fillOpacity: 0.8});");
         writer.println("");
         writer.println("var object;");
 
@@ -136,6 +136,10 @@ public class Parse {
         int obj = 0;
         for (String val: myString1.split(";")){
             coordinates = new ArrayList<Point>();
+
+            String unit = val.substring(0, val.indexOf(':'));
+            System.out.println(unit);
+            int unitCost = Integer.parseInt(unit);
             obj++;
             writer.println("");
             writer.println("");
@@ -171,8 +175,8 @@ public class Parse {
                         }
 
                         if(x < 0) {
-                            height += roomHeight + 2;
-                            sumX = roomHeight;
+                            height += 10 + 2;
+                            sumX = 10;
                         }
                     }
                 }
@@ -180,9 +184,9 @@ public class Parse {
 
 
             }
-            if(obj % 10 == 0) {
-                height += roomHeight + 2;
-                sumX = roomHeight;
+            if(obj % 15 == 0) {
+                height += 10 + 2;
+                sumX = 10;
             }
             sumX += (max + min) + 2;
 
@@ -198,10 +202,10 @@ public class Parse {
                 if(k < number/2) writer.print("p" + k + ",");
                 else writer.print("p" + k);
             }
-            writer.print("], {fillColor: \"green\"});");
+            writer.print("], {fillColor: \"purple\",  fillOpacity: 0.8});");
             writer.println("");
 
-            //FurnitureObject furniture = new FurnitureObject(coordinates);
+            FurnitureObject furniture = new FurnitureObject(coordinates, unitCost);
 
 
 
