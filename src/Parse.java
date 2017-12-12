@@ -6,10 +6,12 @@ public class Parse {
 
     public static final String fileToToWrite = "./visualisation/index.html";
 
+    public Room room;
+    public ArrayList<FurnitureObject> parsedFurnitureObjects = new ArrayList<FurnitureObject>();
 
 
     public static String readFile () throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem30.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem1.txt"));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         String everything = new String();
@@ -29,7 +31,7 @@ public class Parse {
         return everything;
     }
 
-    public static void parseRoom(String roomString, PrintWriter writer){
+    public void parseRoom(String roomString, PrintWriter writer){
         int numberOfCoordinates = 0;
         String numberToConvert;
         ArrayList<Point> coordinates = new ArrayList<>();
@@ -62,9 +64,10 @@ public class Parse {
         writeShapeCode(numberOfCoordinates, coordinates, "red", 0, 0, 0, writer);
 
         Room room = new Room(coordinates);
+        this.room = room;
     }
 
-    public static void parseFurniture(String roomString, String furnitureString, PrintWriter writer){
+    public void parseFurniture(String roomString, String furnitureString, PrintWriter writer){
         int i=0;
         double sumXaxis = 50;
         ArrayList<Point> coordinates = new ArrayList<>();
@@ -134,7 +137,7 @@ public class Parse {
             writeShapeCode(numberOfCoordinates, coordinates, "purple", sumXaxis, height, cost, writer);
 
             FurnitureObject furniture = new FurnitureObject(coordinates, unitCost);
-
+            this.parsedFurnitureObjects.add(furniture);
 
         }
     }
@@ -233,7 +236,7 @@ public class Parse {
     }
 
 
-    public static void parseFile() throws IOException {
+    public void parseFile() throws IOException {
         String problem = new String();
         Parse input = new Parse();
 
