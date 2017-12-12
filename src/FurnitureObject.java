@@ -51,6 +51,13 @@ public class FurnitureObject extends Shape{
         for (Point point : coordinates) {
             if (!point.isInsideShape(room)) return false;
         }
+        for (Line thisLine : this.lines) {
+            for (Line roomLine : room.lines) {
+                if (Point.linesIntersect(thisLine,roomLine)) {
+                    return false;
+                }
+            }
+        }
         return true;
     }
 

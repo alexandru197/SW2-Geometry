@@ -56,6 +56,13 @@ public abstract class Shape {
                 return true;
             }
         }
+
+        for (Point point : this.coordinates) {
+            if (point.isInsideShape(shape)) {
+                return true;
+            }
+        }
+
        for (Line thisLine : this.lines) {
             for (Line shapeLine : shape.lines) {
                 if (Point.linesIntersect(thisLine,shapeLine)) {
@@ -63,6 +70,13 @@ public abstract class Shape {
                 }
             }
        }
+        for (Line thisLine : shape.lines) {
+            for (Line shapeLine : this.lines) {
+                if (Point.linesIntersect(thisLine,shapeLine)) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 

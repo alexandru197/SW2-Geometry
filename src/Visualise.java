@@ -10,7 +10,7 @@ public class Visualise {
     ArrayList<FurnitureObject> objectsInRoom = new ArrayList<FurnitureObject>();
     Room room;
 
-    public static final String fileToToWrite = "./visualisation/index.html";
+    public static final String fileToToWrite = "./visualisation/visualise.html";
 
     public Visualise(ArrayList<FurnitureObject> objectsInRoom, Room room) {
         this.objectsInRoom = objectsInRoom;

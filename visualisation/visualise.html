@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Visualiser</title>
+<link rel="stylesheet" type="text/css" href="jsxgraph.css" />
+<script type="text/javascript" src="jsxgraphcore.js"></script>
+</head>
+<body onload="myFunction()">
+
+<jsxgraph box="jxgbox" width="1000" height="1000" ></jsxgraph>
+
+<script>
+        function myFunction() {
+            var b1 = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-10, 90, 90, -10], axis:true});
+           var shape; 
+
+
+var p1 = b1.create('point', [0.0, 0.0], {name:'',size:0});
+var p2 = b1.create('point', [10.0, 0.0], {name:'',size:0});
+var p3 = b1.create('point', [10.0, 10.0], {name:'',size:0});
+var p4 = b1.create('point', [0.0, 10.0], {name:'',size:0});
+shape = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "white",  fillOpacity: 0.8}); 
+
+
+p1 = b1.create('point', [5.723301704489025, 9.537254037844457], {name:'',size:0});
+p2 = b1.create('point', [9.999999999991188E-4, 7.733019240818708], {name:'',size:0});
+p3 = b1.create('point', [8.730359699532647, 8.453036211619747E-5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3], {fillColor: "purple",  fillOpacity: 9.3});
+
+
+p1 = b1.create('point', [3.000518446683927, 5.000989221815703], {name:'',size:0});
+p2 = b1.create('point', [5.184466839424154E-4, 5.0009892218154475], {name:'',size:0});
+p3 = b1.create('point', [5.184466843842842E-4, 9.892218154385901E-4], {name:'',size:0});
+p4 = b1.create('point', [6.000518446684367, 9.892218159794908E-4], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 5.475});
+
+
+p1 = b1.create('point', [9.534268250757629, 6.7013918190764645], {name:'',size:0});
+p2 = b1.create('point', [9.76964553794127, 9.69214382027611], {name:'',size:0});
+p3 = b1.create('point', [6.778893536741673, 9.927521107459638], {name:'',size:0});
+p4 = b1.create('point', [6.543516249558043, 6.936769106260007], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.11});
+
+
+p1 = b1.create('point', [9.956253091700644, 0.4629999999999995], {name:'',size:0});
+p2 = b1.create('point', [9.999885769192513, 5.462809615320677], {name:'',size:0});
+p3 = b1.create('point', [6.999999999999999, 5.4889892218158], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3], {fillColor: "purple",  fillOpacity: 0.8999999999999999});
+
+
+ }
+       
+    </script>
+
+<div id="jxgbox" class="jxgbox" style="height: 98vh; width: 98vh;"></div>
+
+</body>
+</html>
