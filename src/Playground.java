@@ -16,10 +16,12 @@ public class Playground {
         coordinates.add(point5);
         coordinates.add(point6);
         FurnitureObject furnitureObject = new FurnitureObject(coordinates,1);
-        furnitureObject.displayCoordinates();
-        furnitureObject.rotate(36);
+      //  furnitureObject.displayCoordinates();
+       // furnitureObject.rotate(36);
         System.out.println();
-        furnitureObject.displayCoordinates();
+        Parse parse = new Parse();
+        parse.parseFile();
+       // furnitureObject.displayCoordinates();
 
     }
 

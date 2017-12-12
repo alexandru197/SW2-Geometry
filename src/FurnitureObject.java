@@ -1,3 +1,5 @@
+import sun.security.provider.SHA;
+
 import java.util.ArrayList;
 
 /**
@@ -41,5 +43,9 @@ public class FurnitureObject extends Shape{
     public void translate(double xAmount, double yAmount) {
         translateX(xAmount);
         translateY(yAmount);
+    }
+
+    public double getTotalCost(FurnitureObject object){
+        double totalCost = object.unitCost * object.surface();
     }
 }
