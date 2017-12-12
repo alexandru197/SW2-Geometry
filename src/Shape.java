@@ -7,9 +7,24 @@ import java.util.Iterator;
 public abstract class Shape {
 
     public ArrayList<Point> coordinates = new ArrayList<Point>();
+    public ArrayList<Line> lines = new ArrayList<Line>();
 
     public Shape(ArrayList<Point> coordinates) {
+
         this.coordinates = coordinates;
+        Iterator iterator = coordinates.iterator();
+        Point lastPoint = (Point) iterator.next();
+        Point currentPoint;
+        Line line;
+        while (iterator.hasNext()) {
+            currentPoint = (Point) iterator.next();
+            line = new Line(lastPoint,currentPoint);
+            this.lines.add(line);
+            lastPoint = currentPoint;
+        }
+        currentPoint = this.coordinates.get(0);
+        line = new Line(lastPoint,currentPoint);
+        this.lines.add(line);
     }
 
     public double originDeterminant(Point a, Point b) {
@@ -35,7 +50,27 @@ public abstract class Shape {
     }
 
     public boolean collidesShape(Shape shape) {
-        return true;
+
+        for (Point point : shape.coordinates) {
+            if (point.isInsideShape(this)) {
+                System.out.printf("Point ("+ "%.9f"+", "+"%.9f"+") is inside shape: \n",point.x,point.y);
+                shape.displayCoordinates();
+                System.out.println();
+                return true;
+            }
+        }
+       for (Line thisLine : this.lines) {
+            for (Line shapeLine : shape.lines) {
+                if (Point.linesIntersect(thisLine,shapeLine)) {
+                    System.out.print("Line: ");
+                    thisLine.displayLine();
+                    System.out.print(" intersects with line: ");
+                    shapeLine.displayLine();
+                    return true;
+                }
+            }
+       }
+        return false;
     }
 
 
