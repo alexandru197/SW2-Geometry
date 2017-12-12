@@ -7,10 +7,10 @@ import java.util.Comparator;
  */
 public class Solver {
 
-    public static final int ROTATION_ANGLE = 72;
-    public static final int PRECISE_ROTATION_ANGLE = 5;
-    public static final double OFFSET_VALUE = 0.5;
-    public static final double PRECISE_OFFSET_VALUE = 0.05;
+    public static final double ROTATION_ANGLE = 0.5;
+    public static final double PRECISE_ROTATION_ANGLE = 0.5;
+    public static final double OFFSET_VALUE = 0.01;
+    public static final double PRECISE_OFFSET_VALUE = 0.001;
 
 
 //    public static final int ROTATION_ANGLE = 90;
@@ -42,7 +42,7 @@ public class Solver {
             double minFurnitureX = furnitureObject.minX();
             double minFurnitureY = furnitureObject.minY();
             double maxFurnitureX;
-            double maxFurnitureY = furnitureObject.maxY();
+            double maxFurnitureY;
 
             for (double rotation = 0; rotation < 360 ; rotation += ROTATION_ANGLE) {
                 furnitureObject.rotate(rotation);
@@ -50,9 +50,11 @@ public class Solver {
                 while (!furnitureObject.isInsideRoom(room) || furnitureObject.collidesWithFurnitureInRoom(furnitureInRoom)) {
                     furnitureObject.translateX(OFFSET_VALUE);
                     maxFurnitureX = furnitureObject.maxX();
+                    maxFurnitureY = furnitureObject.maxY();
                     if(maxFurnitureX > maxRoomX) {
                         furnitureObject.translateX(minRoomX - minFurnitureX);
                         furnitureObject.translateY(OFFSET_VALUE);
+                        break;
                     }
 
                     if(maxFurnitureY > maxRoomY) {

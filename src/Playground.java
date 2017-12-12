@@ -21,11 +21,19 @@ public class Playground {
         keptFurtnitureObjects.add(parsedFurnitureObjects.get(1));
         keptFurtnitureObjects.add(parsedFurnitureObjects.get(2));
         keptFurtnitureObjects.add(parsedFurnitureObjects.get(3));
+        keptFurtnitureObjects.add(parsedFurnitureObjects.get(4));
+        keptFurtnitureObjects.add(parsedFurnitureObjects.get(5));
+        keptFurtnitureObjects.add(parsedFurnitureObjects.get(6));
+        keptFurtnitureObjects.add(parsedFurnitureObjects.get(7));
+        keptFurtnitureObjects.add(parsedFurnitureObjects.get(8));
 
-        Solver solver = new Solver(room,keptFurtnitureObjects);
+        Solver solver = new Solver(room,parsedFurnitureObjects);
         solver.solve();
         solver.displayPercentage();
         solver.displayRoomValue();
+
+        Visualise visualise = new Visualise(solver.furnitureInRoom,solver.room);
+        visualise.writeVisualiserCode();
     }
 
 }
