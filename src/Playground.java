@@ -34,6 +34,11 @@ public class Playground {
 
         Visualise visualise = new Visualise(solver.furnitureInRoom,solver.room);
         visualise.writeVisualiserCode();
+//        Point p1 = new Point(0, 0);
+//        Point p2 = new Point(4, 0);
+//        Point q1 = new Point(2, 1);
+//        Point q2 = new Point(1, -1);
+//        System.out.println(Point.pointsDoIntersect(p1, p2, q1, q2));
     }
 
 }

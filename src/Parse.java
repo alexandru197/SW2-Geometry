@@ -11,7 +11,7 @@ public class Parse {
 
 
     public static String readFile () throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem1.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem30.txt"));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         String everything = new String();
