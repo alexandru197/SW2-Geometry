@@ -13,6 +13,12 @@ public class Solver {
     public static final double PRECISE_OFFSET_VALUE = 0.05;
 
 
+//    public static final int ROTATION_ANGLE = 90;
+//    public static final int PRECISE_ROTATION_ANGLE = 45;
+//    public static final double OFFSET_VALUE = 1;
+//    public static final double PRECISE_OFFSET_VALUE = 0.5;
+
+
     Room room;
     ArrayList<FurnitureObject> furniture = new ArrayList<>();
     ArrayList<FurnitureObject> furnitureInRoom = new ArrayList<>();
