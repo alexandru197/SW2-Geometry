@@ -50,8 +50,8 @@ public class FurnitureObject extends Shape{
         return true;
     }
 
-    public double getTotalCost(FurnitureObject object){
-        double totalCost = object.unitCost * object.area();
+    public double getTotalCost(){
+        double totalCost = this.unitCost * this.area();
         return totalCost;
     }
 }
