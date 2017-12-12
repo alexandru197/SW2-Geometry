@@ -62,7 +62,6 @@
     */
     
     /* "background-color: transparent;" may produce artefacts in IE. Solution: setting a color explicitly. */
-    background-color: transparent;
     padding: 0;
     margin: 0;
 }
