@@ -49,4 +49,9 @@ public class FurnitureObject extends Shape{
         }
         return true;
     }
+
+    public double getTotalCost(FurnitureObject object){
+        double totalCost = object.unitCost * object.area();
+        return totalCost;
+    }
 }

@@ -202,8 +202,9 @@ public class Parse {
                 if(k < number/2) writer.print("p" + k + ",");
                 else writer.print("p" + k);
             }
-            writer.print("], {fillColor: \"purple\",  fillOpacity: 0.8});");
-            writer.println("");
+            double cost = (double) unitCost;
+            writer.print("], {fillColor: \"purple\",  fillOpacity: " + (cost / 100 + 0.3) + "});");
+            System.out.println(cost);
 
             FurnitureObject furniture = new FurnitureObject(coordinates, unitCost);
 

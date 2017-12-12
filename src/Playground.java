@@ -28,6 +28,9 @@ public class Playground {
         coordinates.add(point5);
         coordinates.add(point6);
         FurnitureObject furnitureObject = new FurnitureObject(coordinates,1);
+        System.out.println();
+        Parse parse = new Parse();
+        parse.parseFile();
         furnitureObject.displayCoordinates();
         System.out.println();
         System.out.printf("Area = %.9f",furnitureObject.area());
