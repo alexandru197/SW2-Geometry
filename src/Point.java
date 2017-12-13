@@ -123,7 +123,7 @@ public class Point extends Object{
                 double dist2 = this.distanceToPoint(point);
                 double dist = point.distanceToPoint(lastPoint);
 
-                if(dist1 + dist2 == dist) {
+                if(Utility.epsilonEquality(dist1 + dist2,dist)) {
                     return true;
                 }
 

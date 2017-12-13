@@ -7,11 +7,11 @@ import java.util.Comparator;
  */
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 5;
-    public static final double PRECISE_ROTATION_ANGLE = 2.5;
-    public static final double OFFSET_VALUE = 5;
-    public static final double PRECISE_OFFSET_VALUE = 0.005;
-    public static final int PERCENTAGE_BREAKPOINT = 35;
+    public static final double ROTATION_ANGLE = 90;
+    public static final double PRECISE_ROTATION_ANGLE = 2;
+    public static final double OFFSET_VALUE = 1;
+    public static final double PRECISE_OFFSET_VALUE = 0.05;
+    public static final int PERCENTAGE_BREAKPOINT = 30;
     int counter = 0;
 
 //    public static final int ROTATION_ANGLE = 90;
@@ -30,7 +30,8 @@ public class Solver {
     }
 
     public void solve() {
-        Collections.sort(furniture, new CostComporator());
+        //Collections.sort(furniture, new CostComporator());
+        Collections.shuffle(furniture);
 
         double minRoomX = room.minX();
         double maxRoomX = room.maxX();
