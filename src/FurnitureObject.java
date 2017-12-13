@@ -48,19 +48,18 @@ public class FurnitureObject extends Shape{
     }
 
     public boolean isInsideRoom (Room room) {
-        for (Point point : this.coordinates) {
+        for (Point point : coordinates) {
             if (!point.isInsideShape(room)) {
                 return false;
             }
         }
-
-//        for (Line thisLine : this.lines) {
-//            for (Line shapeLine : room.lines) {
-//                if (Point.linesIntersect(thisLine, shapeLine)) {
-//                    return false;
-//                }
-//            }
-//        }
+        for (Line thisLine : this.lines) {
+            for (Line roomLine : room.lines) {
+                if (Point.linesIntersect(thisLine,roomLine)) {
+                    return false;
+                }
+            }
+        }
         return true;
     }
 

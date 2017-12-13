@@ -71,13 +71,6 @@ public class Point extends Object{
         if (o1 != o2 && o3 != o4)
             return true;
 
-        if (o1 == 0 && onSegment(p1, p2, q1)) return true;
-
-        if (o2 == 0 && onSegment(p1, q2, q1)) return true;
-
-        if (o3 == 0 && onSegment(p2, p1, q2)) return true;
-
-        if (o4 == 0 && onSegment(p2, q1, q2)) return true;
 
         return false;
     }
@@ -90,47 +83,73 @@ public class Point extends Object{
         return (a.x * b.y - a.x * c.y + b.x * c.y - b.x * a.y + c.x * a.y - c.x * b.y);
     }
 
-    public boolean isInsideShape (Shape shape) {
-        double area = 0;
-        boolean passedFirstPoint = false;
-        Point lastPoint = null;
-        for (Point point : shape.coordinates) {
-            if (passedFirstPoint == false) {
-                passedFirstPoint = true;
-            }
-            else {
-                area += Math.abs(determinant(point,lastPoint,this))/2;
-            }
-            lastPoint = point;
-        }
-        Point point = shape.coordinates.get(0);
-        area += Math.abs(determinant(point,lastPoint,this))/2;
-        return (Utility.epsilonEquality(area,shape.area()));
-    }
-
-//    public boolean isInsideShape(Shape shape) {
+//    public boolean isInsideShape (Shape shape) {
+//        double area = 0;
 //        boolean passedFirstPoint = false;
+//        boolean determinantWasZero = false;
+//        double determinant;
 //        Point lastPoint = null;
-//        int crossings = 0;
 //        for (Point point : shape.coordinates) {
 //            if (passedFirstPoint == false) {
 //                passedFirstPoint = true;
 //            }
 //            else {
-//                double slope = (point.y - lastPoint.y) / (point.x - lastPoint.x);
-//                boolean cond1 = (lastPoint.x <= this.x) && (this.x < point.x);
-//                boolean cond2 = (point.x <= this.x) && (this.x < lastPoint.x);
-//                boolean above = (this.y < slope * (this.x - lastPoint.x) + lastPoint.y);
-//                if ((cond1 || cond2) && above) crossings++;
+//                determinant = determinant(point,lastPoint,this)/2;;
+//                if(determinant == 0) {
+//                    determinantWasZero = true;
+//                }
+//                area += determinant;
 //            }
 //            lastPoint = point;
 //        }
 //        Point point = shape.coordinates.get(0);
-//        double slope = (point.y - lastPoint.y) / (point.x - lastPoint.x);
-//        boolean cond1 = (lastPoint.x <= this.x) && (this.x < point.x);
-//        boolean cond2 = (point.x <= this.x) && (this.x < lastPoint.x);
-//        boolean above = (this.y < slope * (this.x - lastPoint.x) + lastPoint.y);
-//        if ((cond1 || cond2) && above) crossings++;
-//        return (crossings % 2 != 0);
+//        area += determinant(point,lastPoint,this)/2;
+//        area = Math.abs(area);
+//        if(Utility.epsilonEquality(area, shape.area()))
+//            return true;
+//        return false;
 //    }
+
+    public boolean isInsideShape(Shape shape) {
+        boolean passedFirstPoint = false;
+        Point lastPoint = null;
+        int crossings = 0;
+        for (Point point : shape.coordinates) {
+            if (passedFirstPoint == false) {
+                passedFirstPoint = true;
+            }
+            else {
+                double dist1 = this.distanceToPoint(lastPoint);
+                double dist2 = this.distanceToPoint(point);
+                double dist = point.distanceToPoint(lastPoint);
+
+                if(dist1 + dist2 == dist) {
+                    return true;
+                }
+
+                double slope = (point.y - lastPoint.y) / (point.x - lastPoint.x);
+                boolean cond1 = (lastPoint.x <= this.x) && (this.x < point.x);
+                boolean cond2 = (point.x <= this.x) && (this.x < lastPoint.x);
+                boolean above = (this.y < slope * (this.x - lastPoint.x) + lastPoint.y);
+                if ((cond1 || cond2) && above) crossings++;
+            }
+            lastPoint = point;
+        }
+        Point point = shape.coordinates.get(0);
+
+        double dist1 = this.distanceToPoint(lastPoint);
+        double dist2 = this.distanceToPoint(point);
+        double dist = point.distanceToPoint(lastPoint);
+
+        if(dist1 + dist2 == dist) {
+            return true;
+        }
+
+        double slope = (point.y - lastPoint.y) / (point.x - lastPoint.x);
+        boolean cond1 = (lastPoint.x <= this.x) && (this.x < point.x);
+        boolean cond2 = (point.x <= this.x) && (this.x < lastPoint.x);
+        boolean above = (this.y < slope * (this.x - lastPoint.x) + lastPoint.y);
+        if ((cond1 || cond2) && above) crossings++;
+        return (crossings % 2 != 0);
+    }
 }

@@ -10,7 +10,7 @@ public class Visualise {
     ArrayList<FurnitureObject> objectsInRoom = new ArrayList<FurnitureObject>();
     Room room;
 
-    public static final String fileToToWrite = "./visualisation/index.html";
+    public static final String fileToToWrite = "./visualisation/visualise.html";
 
     public Visualise(ArrayList<FurnitureObject> objectsInRoom, Room room) {
         this.objectsInRoom = objectsInRoom;
@@ -26,7 +26,7 @@ public class Visualise {
             if (k < room.coordinates.size()) writer.print("p" + k + ",");
             else writer.print("p" + k);
         }
-        writer.print("], {fillColor: \"white\",  fillOpacity: 0.8}); \n\n\n");
+        writer.print("], {fillColor: \"red\",  fillOpacity: 0.8}); \n\n\n");
     }
 
     public static void drawFurniture(ArrayList<FurnitureObject> objectsInRoom, PrintWriter writer) {
