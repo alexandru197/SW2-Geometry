@@ -11,7 +11,7 @@ public class Parse {
 
 
     public static String readFile () throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem19.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem29.txt"));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         String everything = new String();
@@ -31,14 +31,15 @@ public class Parse {
         return everything;
     }
 
-    public void parseRoom(String roomString, PrintWriter writer){
+    public double parseRoom(String roomString, PrintWriter writer){
         int numberOfCoordinates = 0;
         String numberToConvert;
         ArrayList<Point> coordinates = new ArrayList<>();
-        double sumXaxis = 0;
-        double max = 0;
         Double x, y = 0.0;
         int j = 0;
+        double maxX = 0;
+        double roomHeight = 0;
+        double yMin = 0;
         while(j < roomString.length()){
             numberToConvert = "";
             if(Character.isDigit(roomString.charAt(j)) || roomString.charAt(j) == '-') {
@@ -55,19 +56,26 @@ public class Parse {
                 numberOfCoordinates ++;
                 if(numberOfCoordinates % 2 == 0) {
                     coordinates.add(new Point(x, y));
+                    if(Double.compare(x, maxX) > 0)
+                        maxX = x;
+                    if(Double.compare(y, roomHeight) > 0)
+                        roomHeight = y;
+                    if(Double.compare(y, yMin) < 0)
+                        yMin = y;
                 }
             }
             else j++;
 
         }
 
-        writeShapeCode(numberOfCoordinates, coordinates, "red", 0, 0, 0, writer);
+        writeShapeCode(numberOfCoordinates, coordinates, "red", 0, 0, maxX, writer);
 
         Room room = new Room(coordinates);
         this.room = room;
+        return (roomHeight - yMin);
     }
 
-    public void parseFurniture(String roomString, String furnitureString, PrintWriter writer){
+    public void parseFurniture(String roomString, String furnitureString, PrintWriter writer, double roomHeight){
         int i=0;
         double sumXaxis = 50;
         ArrayList<Point> coordinates = new ArrayList<>();
@@ -77,7 +85,7 @@ public class Parse {
         double min = 0;
         int obj = 0;
         String numberToConvert;
-        double height = 10;
+        double height = 0;
         for (String val: furnitureString.split(";")){
             coordinates = new ArrayList<>();
 
@@ -114,24 +122,23 @@ public class Parse {
                             min = x;
                         }
 
-                        if(x < 0) {
-                            height += 20;
-                            sumXaxis = 10;
-                        }
+//                        if(x < 0) {
+//                            height += 20;
+//                            sumXaxis = 10;
+//                        }
                     }
                 }
                 else j++;
 
 
             }
-            if(obj % 15 == 0) {
-                height += 20;
+            if(obj % 25 == 0) {
+                height += (roomHeight/10) + 5;
                 sumXaxis = 10;
             }
-            sumXaxis += (max + min) + 2;
+            sumXaxis += (max + min) + 10;
 
             double cost = (double) unitCost;
-
             writeShapeCode(numberOfCoordinates, coordinates, "purple", sumXaxis, height, cost, writer);
 
             FurnitureObject furniture = new FurnitureObject(coordinates, unitCost);
@@ -207,7 +214,7 @@ public class Parse {
 
         if(color == "red") {
             for (int i = 0; i < numberOfCoordinates / 2; ++i) {
-                writer.println("var p" + (i + 1) + " = b1.create('point', [" + coordinates.get(i).x + ", " + coordinates.get(i).y + "], {name:'',size:0});");
+                writer.println("var p" + (i + 1) + " = b1.create('point', [" + (coordinates.get(i).x - cost) + ", " + coordinates.get(i).y + "], {name:'',size:0});");
             }
             writer.print("shape = b1.create('polygon',[");
             for (int k = 1; k <= numberOfCoordinates / 2; ++k) {
@@ -261,9 +268,9 @@ public class Parse {
 
         indexBegin(fileToToWrite, writer);
 
-        parseRoom(roomString, writer);
+        double roomHeight = parseRoom(roomString, writer);
 
-        parseFurniture(roomString, furnitureString, writer);
+        parseFurniture(roomString, furnitureString, writer, roomHeight);
 
         indexEnd(fileToToWrite, writer);
 
