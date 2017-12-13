@@ -9,8 +9,9 @@ public class Solver {
 
     public static final double ROTATION_ANGLE = 5;
     public static final double PRECISE_ROTATION_ANGLE = 2.5;
-    public static final double OFFSET_VALUE = 0.1;
+    public static final double OFFSET_VALUE = 5;
     public static final double PRECISE_OFFSET_VALUE = 0.005;
+    public static final int PERCENTAGE_BREAKPOINT = 35;
     int counter = 0;
 
 //    public static final int ROTATION_ANGLE = 90;
@@ -35,10 +36,20 @@ public class Solver {
         double maxRoomX = room.maxX();
         double minRoomY = room.minY();
         double maxRoomY = room.maxY();
+        double coveredArea = 0;
 
         for (FurnitureObject furnitureObject : furniture) {
+
+            if (coveredArea*100/room.area() > PERCENTAGE_BREAKPOINT) {
+                System.out.println();
+                System.out.println("Covered "+ PERCENTAGE_BREAKPOINT + "% ... BREAKING ... ");
+                System.out.println();
+                break;
+            }
+
             counter++;
-            System.out.println("Testing object " + counter + " out of " + furniture.size() + " objects ..." + counter * 100 / furniture.size()+ "%");
+            System.out.println("Testing object " + counter + " out of " + furniture.size() + " objects ..." + counter * 100 / furniture.size()+ "% ... " +
+                    + coveredArea*100/room.area() + "% covered ....");
             double minFurnitureX = furnitureObject.minX();
             double minFurnitureY = furnitureObject.minY();
             double maxFurnitureX = furnitureObject.maxX();
@@ -103,6 +114,7 @@ public class Solver {
 
                     } while(ok);
                     furnitureInRoom.add(furnitureObject);
+                    coveredArea += furnitureObject.area;
                     System.out.println("Adding furniture object... :");
                     furnitureObject.displayCoordinates();
                     System.out.println();

@@ -11,7 +11,7 @@ public class Parse {
 
 
     public static String readFile () throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem8.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem29.txt"));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         String everything = new String();
@@ -71,8 +71,6 @@ public class Parse {
         int i=0;
         double sumXaxis = 50;
         ArrayList<Point> coordinates = new ArrayList<>();
-        roomString = furnitureString.substring(0, 3);
-        furnitureString = furnitureString.replace(roomString ,"");
         double max = 0;
         Double x, y = 0.0;
         int j = 0;
@@ -81,7 +79,7 @@ public class Parse {
         String numberToConvert;
         double height = 10;
         for (String val: furnitureString.split(";")){
-            coordinates = new ArrayList<Point>();
+            coordinates = new ArrayList<>();
 
             String unit = val.substring(0, val.indexOf(':'));
             int unitCost = Integer.parseInt(unit);
@@ -257,6 +255,8 @@ public class Parse {
 
         String roomString = problem.substring(3, problem.indexOf('#') + 2);
         String furnitureString = problem.replace(roomString ,"");
+        furnitureString = furnitureString.substring(3, furnitureString.length());
+
         roomString = roomString.substring(0, roomString.length() - 2);
 
         indexBegin(fileToToWrite, writer);
