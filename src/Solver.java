@@ -7,9 +7,9 @@ import java.util.Comparator;
  */
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 10;
-    public static final double PRECISE_ROTATION_ANGLE = 5;
-    public static final double OFFSET_VALUE = 0.01;
+    public static final double ROTATION_ANGLE = 5;
+    public static final double PRECISE_ROTATION_ANGLE = 2.5;
+    public static final double OFFSET_VALUE = 0.1;
     public static final double PRECISE_OFFSET_VALUE = 0.005;
     int counter = 0;
 
@@ -111,10 +111,11 @@ public class Solver {
 
             }
         }
-
+        System.out.println();
+        System.out.println("Printing solution ...");
+        System.out.println();
         for (FurnitureObject furnitureObject : furnitureInRoom) {
             furnitureObject.displayCoordinates();
-            System.out.println();
         }
 
     }
@@ -149,6 +150,7 @@ public class Solver {
         public int compare(FurnitureObject a, FurnitureObject b) {
             if (a.totalCost < b.totalCost) return 1;
             if (a.totalCost == b.totalCost && a.area < b.area) return 1;
+            if (a.totalCost == b.totalCost && a.area == b.area) return 0;
             return -1;
         }
     }
