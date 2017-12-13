@@ -120,6 +120,14 @@ public class Point extends Object{
                 passedFirstPoint = true;
             }
             else {
+                double dist1 = this.distanceToPoint(lastPoint);
+                double dist2 = this.distanceToPoint(point);
+                double dist = point.distanceToPoint(lastPoint);
+
+                if(dist1 + dist2 == dist) {
+                    return true;
+                }
+
                 double slope = (point.y - lastPoint.y) / (point.x - lastPoint.x);
                 boolean cond1 = (lastPoint.x <= this.x) && (this.x < point.x);
                 boolean cond2 = (point.x <= this.x) && (this.x < lastPoint.x);
@@ -129,6 +137,15 @@ public class Point extends Object{
             lastPoint = point;
         }
         Point point = shape.coordinates.get(0);
+
+        double dist1 = this.distanceToPoint(lastPoint);
+        double dist2 = this.distanceToPoint(point);
+        double dist = point.distanceToPoint(lastPoint);
+
+        if(dist1 + dist2 == dist) {
+            return true;
+        }
+
         double slope = (point.y - lastPoint.y) / (point.x - lastPoint.x);
         boolean cond1 = (lastPoint.x <= this.x) && (this.x < point.x);
         boolean cond2 = (point.x <= this.x) && (this.x < lastPoint.x);
