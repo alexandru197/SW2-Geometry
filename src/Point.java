@@ -50,10 +50,9 @@ public class Point extends Object{
 
         return false;
     }
+
     public static int orientation(Point p, Point q, Point r)
     {
-        // See http://www.geeksforgeeks.org/orientation-3-ordered-points/
-        // for details of below formula.
         double val = (q.y - p.y) * (r.x - q.x) -
                 (q.x - p.x) * (r.y - q.y);
 

@@ -7,17 +7,15 @@ import java.util.Comparator;
  */
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 0.5;
-    public static final double PRECISE_ROTATION_ANGLE = 0.5;
-    public static final double OFFSET_VALUE = 0.01;
-    public static final double PRECISE_OFFSET_VALUE = 0.001;
-
-
+    public static final double ROTATION_ANGLE = 36;
+    public static final double PRECISE_ROTATION_ANGLE = 5;
+    public static final double OFFSET_VALUE = 0.5;
+    public static final double PRECISE_OFFSET_VALUE = 0.1;
+    int counter = 0;
 //    public static final int ROTATION_ANGLE = 90;
 //    public static final int PRECISE_ROTATION_ANGLE = 45;
 //    public static final double OFFSET_VALUE = 1;
 //    public static final double PRECISE_OFFSET_VALUE = 0.5;
-
 
     Room room;
     ArrayList<FurnitureObject> furniture = new ArrayList<>();
@@ -38,7 +36,8 @@ public class Solver {
         double maxRoomY = room.maxY();
 
         for (FurnitureObject furnitureObject : furniture) {
-
+            counter++;
+            System.out.println("Testing object " + counter + " out of " + furniture.size() + " objects ..." + counter * 100 / furniture.size()+ "%");
             double minFurnitureX = furnitureObject.minX();
             double minFurnitureY = furnitureObject.minY();
             double maxFurnitureX;
@@ -47,7 +46,7 @@ public class Solver {
             for (double rotation = 0; rotation < 360 ; rotation += ROTATION_ANGLE) {
                 furnitureObject.rotate(rotation);
                 furnitureObject.translate(minRoomX - minFurnitureX, minRoomY - minFurnitureY);
-                while (!furnitureObject.isInsideRoom(room) || furnitureObject.collidesWithFurnitureInRoom(furnitureInRoom)) {
+                while (!isInValidPosition(furnitureObject)) {
                     furnitureObject.translateX(OFFSET_VALUE);
                     maxFurnitureX = furnitureObject.maxX();
                     maxFurnitureY = furnitureObject.maxY();
@@ -131,6 +130,7 @@ public class Solver {
     }
 
     private boolean isInValidPosition(FurnitureObject furnitureObject) {
+        //return !furnitureObject.collidesWithFurnitureInRoom(furnitureInRoom);
         return furnitureObject.isInsideRoom(room) && !furnitureObject.collidesWithFurnitureInRoom(furnitureInRoom);
     }
 
