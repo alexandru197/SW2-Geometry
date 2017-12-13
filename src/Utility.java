@@ -3,7 +3,7 @@
  */
 public class Utility {
 
-    static final double EPSILON = 0.000000001;
+    static final double EPSILON = 0.0000000001;
 
     static boolean epsilonEquality (double a, double b) {
         double diff = Math.abs(a-b);

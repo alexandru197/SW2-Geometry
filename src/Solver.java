@@ -7,9 +7,9 @@ import java.util.Comparator;
  */
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 90;
+    public static final double ROTATION_ANGLE = 360;
     public static final double PRECISE_ROTATION_ANGLE = 2;
-    public static final double OFFSET_VALUE = 1;
+    public static final double OFFSET_VALUE = 5;
     public static final double PRECISE_OFFSET_VALUE = 0.05;
     public static final int PERCENTAGE_BREAKPOINT = 30;
     int counter = 0;
@@ -30,8 +30,8 @@ public class Solver {
     }
 
     public void solve() {
-        //Collections.sort(furniture, new CostComporator());
-        Collections.shuffle(furniture);
+        Collections.sort(furniture, new CostComporator());
+        //Collections.shuffle(furniture);
 
         double minRoomX = room.minX();
         double maxRoomX = room.maxX();
@@ -96,13 +96,13 @@ public class Solver {
                         furnitureObject.translateY(PRECISE_OFFSET_VALUE);
 
 
-                        while(isInValidPosition(furnitureObject)) {
-                            furnitureObject.rotate(PRECISE_ROTATION_ANGLE);
-                        }
-                        if(isInValidPosition(furnitureObject)) {
-                            ok = true;
-                        }
-                        furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
+//                        while(isInValidPosition(furnitureObject)) {
+//                            furnitureObject.rotate(PRECISE_ROTATION_ANGLE);
+//                        }
+//                        if(isInValidPosition(furnitureObject)) {
+//                            ok = true;
+//                        }
+//                        furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
 
                         while(isInValidPosition(furnitureObject)) {
                             furnitureObject.translateX(-PRECISE_OFFSET_VALUE);
