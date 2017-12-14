@@ -2,16 +2,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-/**
- * Created by bogdannitescu on 12/12/2017.
- */
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 180;
+    public static final double ROTATION_ANGLE = 10;
     public static final double PRECISE_ROTATION_ANGLE = 0.1;
-    public static final double OFFSET_VALUE = 10;
-    public static final double PRECISE_OFFSET_VALUE = 0.05;
-    public static final int PERCENTAGE_BREAKPOINT = 30;
+    public static final double OFFSET_VALUE = 0.01;
+    public static final double PRECISE_OFFSET_VALUE = 0.01;
+    public static final int PERCENTAGE_BREAKPOINT = 100;
+    public static final double SCORE_BREAKPOINT = 1913;
     int counter = 0;
 
 //    public static final int ROTATION_ANGLE = 90;
@@ -30,17 +28,17 @@ public class Solver {
     }
 
     public void solve() {
-        Collections.sort(furniture, new CostComporator());
-        //Collections.shuffle(furniture);
+        //Collections.sort(furniture, new AreaComporator());
+        Collections.shuffle(furniture);
 
         double minRoomX = room.minX();
         double maxRoomX = room.maxX();
         double minRoomY = room.minY();
         double maxRoomY = room.maxY();
         double coveredArea = 0;
+        double roomValue = 0;
 
         for (FurnitureObject furnitureObject : furniture) {
-
             if (coveredArea*100/room.area() > PERCENTAGE_BREAKPOINT) {
                 System.out.println();
                 System.out.println("Covered "+ PERCENTAGE_BREAKPOINT + "% ... BREAKING ... ");
@@ -51,6 +49,7 @@ public class Solver {
             counter++;
             System.out.println("Testing object " + counter + " out of " + furniture.size() + " objects ..." + counter * 100 / furniture.size()+ "% ... " +
                     + coveredArea*100/room.area() + "% covered ....");
+            System.out.println("Room value is... : "+roomValue);
             double minFurnitureX = furnitureObject.minX();
             double minFurnitureY = furnitureObject.minY();
             double maxFurnitureX = furnitureObject.maxX();
@@ -85,42 +84,61 @@ public class Solver {
                 if (isInValidPosition(furnitureObject)) {
                     boolean ok = false;
 
+                    do {
+                        int countLoops = 0;
+                        ok = false;
+
                         while(isInValidPosition(furnitureObject)) {
+                            countLoops++;
                             furnitureObject.translateY(-PRECISE_OFFSET_VALUE);
                         }
-
+                        if(countLoops > 1) {
+                            ok = true;
+                        }
+                        if(countLoops == 1) {
                             furnitureObject.translateY(PRECISE_OFFSET_VALUE);
-
-
-
-
-//                        while(isInValidPosition(furnitureObject)) {
-//                            furnitureObject.rotate(PRECISE_ROTATION_ANGLE);
-//                        }
-//                        if(isInValidPosition(furnitureObject)) {
-//                            ok = true;
-
-//                        }
-//                        furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
-
-                        while(isInValidPosition(furnitureObject)) {
-                            furnitureObject.translateX(-PRECISE_OFFSET_VALUE);
                         }
 
+                        countLoops = 0;
+                        while(isInValidPosition(furnitureObject)) {
+                            countLoops++;
+                            furnitureObject.rotate(PRECISE_ROTATION_ANGLE);
+                        }
+                        if(countLoops > 1) {
+                            ok = true;
+                        }
+                        if(countLoops == 1) {
+                            furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
+                        }
+
+                        countLoops = 0;
+                        while(isInValidPosition(furnitureObject)) {
+                            countLoops++;
+                            furnitureObject.translateX(-PRECISE_OFFSET_VALUE);
+                        }
+                        if(countLoops > 1) {
+                            ok = true;
+                        }
+                        if(countLoops == 1) {
                             furnitureObject.translateX(PRECISE_OFFSET_VALUE);
+                        }
 
-
-
+                    } while(ok);
 
                     furnitureInRoom.add(furnitureObject);
                     coveredArea += furnitureObject.area;
                     System.out.println("Adding furniture object... :");
                     furnitureObject.displayCoordinates();
                     System.out.println();
+                    roomValue += furnitureObject.totalCost;
+                    break;
+                }
+                if(roomValue >= SCORE_BREAKPOINT) {
                     break;
                 }
 
             }
+
         }
         System.out.println();
         System.out.println("Printing solution ...");
@@ -129,6 +147,14 @@ public class Solver {
             furnitureObject.displayCoordinates();
         }
 
+    }
+
+    public double getRoomValue() {
+        double value = 0;
+        for (FurnitureObject furnitureObject : furnitureInRoom) {
+            value += furnitureObject.totalCost;
+        }
+        return value;
     }
 
     public void displayPercentage() {
@@ -169,7 +195,7 @@ public class Solver {
     class AreaComporator implements Comparator<FurnitureObject> {
         @Override
         public int compare(FurnitureObject a, FurnitureObject b) {
-            if (a.area < b.area) return 1;
+            if (a.area > b.area) return 1;
             if (a.area == b. area) return 0;
             return -1;
         }

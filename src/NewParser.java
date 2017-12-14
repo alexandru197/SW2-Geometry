@@ -14,7 +14,7 @@ public class NewParser {
     public ArrayList<FurnitureObject> parsedFurnitureObjects = new ArrayList<FurnitureObject>();
 
     public void parse() {
-        try(BufferedReader br = new BufferedReader(new FileReader("./Problems/problem11.txt"))) {
+        try(BufferedReader br = new BufferedReader(new FileReader("./Problems/problem1.txt"))) {
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
 
