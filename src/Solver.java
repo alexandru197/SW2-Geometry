@@ -4,12 +4,12 @@ import java.util.Comparator;
 
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 30;
+    public static final double ROTATION_ANGLE = 32;
     public static final double PRECISE_ROTATION_ANGLE = 0.1;
-    public static final double OFFSET_VALUE = 0.5;
+    public static final double OFFSET_VALUE = 0.8;
     public static final double PRECISE_OFFSET_VALUE = 0.01;
     public static final int PERCENTAGE_BREAKPOINT = 100;
-    public static final double SCORE_BREAKPOINT = 100000000;
+    public static final double SCORE_BREAKPOINT = 999999;
     int counter = 0;
 
 //    public static final int ROTATION_ANGLE = 90;
@@ -48,8 +48,7 @@ public class Solver {
 
             counter++;
             System.out.println("Testing object " + counter + " out of " + furniture.size() + " objects ..." + counter * 100 / furniture.size()+ "% ... " +
-                    + coveredArea*100/room.area() + "% covered ....");
-            System.out.println("Room value is... : "+roomValue);
+                    + coveredArea*100/room.area() + "% covered ...." + "Room value is... : "+roomValue);
             double minFurnitureX = furnitureObject.minX();
             double minFurnitureY = furnitureObject.minY();
             double maxFurnitureX = furnitureObject.maxX();
@@ -134,10 +133,11 @@ public class Solver {
                     roomValue += furnitureObject.totalCost;
                     break;
                 }
-                if(roomValue >= SCORE_BREAKPOINT) {
-                    break;
-                }
 
+            }
+            if(roomValue >= SCORE_BREAKPOINT) {
+                System.out.println("Room value bigger than " + SCORE_BREAKPOINT + " ... BREAKING ...");
+                break;
             }
 
         }
