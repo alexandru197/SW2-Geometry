@@ -11,7 +11,7 @@ public class Parse {
 
 
     public static String readFile () throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem29.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem23.txt"));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         String everything = new String();
@@ -96,7 +96,7 @@ public class Parse {
             min = 0;
             y = 0.0;
             x = 0.0;
-            j = 2;
+            j = 1;
             int numberOfCoordinates = 0;
             while(j < val.length()){
                 numberToConvert = "";

@@ -7,9 +7,9 @@ import java.util.Comparator;
  */
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 360;
+    public static final double ROTATION_ANGLE = 45;
     public static final double PRECISE_ROTATION_ANGLE = 2;
-    public static final double OFFSET_VALUE = 2;
+    public static final double OFFSET_VALUE = 10;
     public static final double PRECISE_OFFSET_VALUE = 0.05;
     public static final int PERCENTAGE_BREAKPOINT = 30;
     int counter = 0;
