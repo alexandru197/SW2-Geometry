@@ -4,12 +4,12 @@ import java.util.Comparator;
 
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 10;
+    public static final double ROTATION_ANGLE = 30;
     public static final double PRECISE_ROTATION_ANGLE = 0.1;
-    public static final double OFFSET_VALUE = 0.01;
+    public static final double OFFSET_VALUE = 0.5;
     public static final double PRECISE_OFFSET_VALUE = 0.01;
     public static final int PERCENTAGE_BREAKPOINT = 100;
-    public static final double SCORE_BREAKPOINT = 1913;
+    public static final double SCORE_BREAKPOINT = 100000000;
     int counter = 0;
 
 //    public static final int ROTATION_ANGLE = 90;
@@ -28,8 +28,8 @@ public class Solver {
     }
 
     public void solve() {
-        //Collections.sort(furniture, new AreaComporator());
-        Collections.shuffle(furniture);
+        Collections.sort(furniture, new CostComporator());
+//        Collections.shuffle(furniture);
 
         double minRoomX = room.minX();
         double maxRoomX = room.maxX();
@@ -56,10 +56,9 @@ public class Solver {
             double maxFurnitureY = furnitureObject.maxY();
 
             for (double rotation = 0; rotation < 360 ; rotation += ROTATION_ANGLE) {
-                //furnitureObject.rotate(ROTATION_ANGLE);
                 furnitureObject.translate(minRoomX - minFurnitureX, minRoomY - minFurnitureY);
                 while (!isInValidPosition(furnitureObject)) {
-                    furnitureObject.translateX(OFFSET_VALUE);
+
                     maxFurnitureX = furnitureObject.maxX();
                     maxFurnitureY = furnitureObject.maxY();
                     minFurnitureX = furnitureObject.minX();
@@ -80,6 +79,8 @@ public class Solver {
                     if (isInValidPosition(furnitureObject)) {
                         break;
                     }
+                    furnitureObject.translateX(OFFSET_VALUE);
+                    furnitureObject.rotate(ROTATION_ANGLE);
                 }
                 if (isInValidPosition(furnitureObject)) {
                     boolean ok = false;
@@ -95,7 +96,7 @@ public class Solver {
                         if(countLoops > 1) {
                             ok = true;
                         }
-                        if(countLoops == 1) {
+                        if(countLoops >= 1) {
                             furnitureObject.translateY(PRECISE_OFFSET_VALUE);
                         }
 
@@ -107,7 +108,7 @@ public class Solver {
                         if(countLoops > 1) {
                             ok = true;
                         }
-                        if(countLoops == 1) {
+                        if(countLoops >= 1) {
                             furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
                         }
 
@@ -119,7 +120,7 @@ public class Solver {
                         if(countLoops > 1) {
                             ok = true;
                         }
-                        if(countLoops == 1) {
+                        if(countLoops >= 1) {
                             furnitureObject.translateX(PRECISE_OFFSET_VALUE);
                         }
 

@@ -39,6 +39,15 @@ public class Point extends Object{
                 Point.counterClockwiseTurn(line1StartPoint,line1EndPoint,line2EndPoint);
         test2 = Point.counterClockwiseTurn(line2StartPoint,line2EndPoint,line1StartPoint) *
                 Point.counterClockwiseTurn(line2StartPoint,line2EndPoint,line1EndPoint);
+        return (test1 < 0) && (test2 < 0);
+    }
+
+    public static boolean linesDefinedByFourPointsIntersectTrueOnEdge(Point line1StartPoint, Point line1EndPoint, Point line2StartPoint, Point line2EndPoint) {
+        int test1, test2;
+        test1 = Point.counterClockwiseTurn(line1StartPoint,line1EndPoint,line2StartPoint) *
+                Point.counterClockwiseTurn(line1StartPoint,line1EndPoint,line2EndPoint);
+        test2 = Point.counterClockwiseTurn(line2StartPoint,line2EndPoint,line1StartPoint) *
+                Point.counterClockwiseTurn(line2StartPoint,line2EndPoint,line1EndPoint);
         return (test1 <= 0) && (test2 <= 0);
     }
 
@@ -71,8 +80,24 @@ public class Point extends Object{
         if (o1 != o2 && o3 != o4)
             return true;
 
+        // Special Cases
+        // p1, q1 and p2 are colinear and p2 lies on segment p1q1
+        if (o1 == 0 && onSegment(p1, p2, q1)) return true;
+
+        // p1, q1 and p2 are colinear and q2 lies on segment p1q1
+        if (o2 == 0 && onSegment(p1, q2, q1)) return true;
+
+        // p2, q2 and p1 are colinear and p1 lies on segment p2q2
+        if (o3 == 0 && onSegment(p2, p1, q2)) return true;
+
+        // p2, q2 and q1 are colinear and q1 lies on segment p2q2
+        if (o4 == 0 && onSegment(p2, q1, q2)) return true;
 
         return false;
+    }
+
+    public static boolean linesIntersectFalseOnEdge(Line line1, Line line2) {
+        return linesDefinedByFourPointsIntersect(line1.startPoint,line1.endPoint,line2.startPoint,line2.endPoint);
     }
 
     public static boolean linesIntersect(Line line1, Line line2) {
@@ -141,7 +166,7 @@ public class Point extends Object{
         double dist2 = this.distanceToPoint(point);
         double dist = point.distanceToPoint(lastPoint);
 
-        if(dist1 + dist2 == dist) {
+        if(Utility.epsilonEquality(dist1 + dist2,dist)) {
             return true;
         }
 

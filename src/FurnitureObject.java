@@ -55,7 +55,7 @@ public class FurnitureObject extends Shape{
         }
         for (Line thisLine : this.lines) {
             for (Line roomLine : room.lines) {
-                if (Point.linesIntersect(thisLine,roomLine)) {
+                if (Point.linesIntersectFalseOnEdge(thisLine,roomLine)) {
                     return false;
                 }
             }
