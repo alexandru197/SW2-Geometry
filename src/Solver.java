@@ -7,8 +7,8 @@ import java.util.Comparator;
  */
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 45;
-    public static final double PRECISE_ROTATION_ANGLE = 2;
+    public static final double ROTATION_ANGLE = 180;
+    public static final double PRECISE_ROTATION_ANGLE = 0.1;
     public static final double OFFSET_VALUE = 10;
     public static final double PRECISE_OFFSET_VALUE = 0.05;
     public static final int PERCENTAGE_BREAKPOINT = 30;
@@ -30,8 +30,8 @@ public class Solver {
     }
 
     public void solve() {
-        //Collections.sort(furniture, new CostComporator());
-        Collections.shuffle(furniture);
+        Collections.sort(furniture, new AreaComporator());
+        //Collections.shuffle(furniture);
 
         double minRoomX = room.minX();
         double maxRoomX = room.maxX();
@@ -57,7 +57,7 @@ public class Solver {
             double maxFurnitureY = furnitureObject.maxY();
 
             for (double rotation = 0; rotation < 360 ; rotation += ROTATION_ANGLE) {
-                furnitureObject.rotate(ROTATION_ANGLE);
+                //furnitureObject.rotate(ROTATION_ANGLE);
                 furnitureObject.translate(minRoomX - minFurnitureX, minRoomY - minFurnitureY);
                 while (!isInValidPosition(furnitureObject)) {
                     furnitureObject.translateX(OFFSET_VALUE);
@@ -84,38 +84,34 @@ public class Solver {
                 }
                 if (isInValidPosition(furnitureObject)) {
                     boolean ok = false;
-//                    do {
-//                        ok = false;
+
+                        while(isInValidPosition(furnitureObject)) {
+                            furnitureObject.translateY(-PRECISE_OFFSET_VALUE);
+                        }
+
+                            furnitureObject.translateY(PRECISE_OFFSET_VALUE);
+
+
+
+
 //                        while(isInValidPosition(furnitureObject)) {
-//                            furnitureObject.translateY(-PRECISE_OFFSET_VALUE);
+//                            furnitureObject.rotate(PRECISE_ROTATION_ANGLE);
 //                        }
-//                        if(!isInValidPosition(furnitureObject)) {
+//                        if(isInValidPosition(furnitureObject)) {
 //                            ok = true;
-//                            furnitureObject.translateY(PRECISE_OFFSET_VALUE);
+
 //                        }
-//
-//
-//
-////                        while(isInValidPosition(furnitureObject)) {
-////                            furnitureObject.rotate(PRECISE_ROTATION_ANGLE);
-////                        }
-////                        if(isInValidPosition(furnitureObject)) {
-////                            ok = true;
-//
-////                        }
-////                        furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
-//
-//                        while(isInValidPosition(furnitureObject)) {
-//                            furnitureObject.translateX(-PRECISE_OFFSET_VALUE);
-//                        }
-//                        if(!isInValidPosition(furnitureObject)) {
-//                            ok = true;
-//                            furnitureObject.translateX(PRECISE_OFFSET_VALUE);
-//                        }
-//
-//
-//
-//                    } while(ok);
+//                        furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
+
+                        while(isInValidPosition(furnitureObject)) {
+                            furnitureObject.translateX(-PRECISE_OFFSET_VALUE);
+                        }
+
+                            furnitureObject.translateX(PRECISE_OFFSET_VALUE);
+
+
+
+
                     furnitureInRoom.add(furnitureObject);
                     coveredArea += furnitureObject.area;
                     System.out.println("Adding furniture object... :");
@@ -166,6 +162,15 @@ public class Solver {
             if (a.totalCost < b.totalCost) return 1;
             if (a.totalCost == b.totalCost && a.area < b.area) return 1;
             if (a.totalCost == b.totalCost && a.area == b.area) return 0;
+            return -1;
+        }
+    }
+
+    class AreaComporator implements Comparator<FurnitureObject> {
+        @Override
+        public int compare(FurnitureObject a, FurnitureObject b) {
+            if (a.area < b.area) return 1;
+            if (a.area == b. area) return 0;
             return -1;
         }
     }
