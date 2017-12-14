@@ -40,6 +40,7 @@ public class NewParser {
 
             String[] pointsInRoom = room.split(Pattern.quote("),("));
             for (String point : pointsInRoom) {
+                point = point.replaceAll(Pattern.quote(")"),"");
                 String[] pointCoordinates = point.split(",");
                 Point point1 = new Point(Double.parseDouble(pointCoordinates[0]), Double.parseDouble(pointCoordinates[1]));
 
@@ -59,6 +60,7 @@ public class NewParser {
                 String furnitureString = costAndPoints[1].substring(1, costAndPoints[1].length()-1);
                 String[] pointsInFurniture = furnitureString.split(Pattern.quote("),("));
                 for (String point : pointsInFurniture) {
+                    point = point.replaceAll(Pattern.quote(")"),"");
                     String[] pointCoordinates = point.split(",");
                     Point point1 = new Point(Double.parseDouble(pointCoordinates[0]), Double.parseDouble(pointCoordinates[1]));
                     points.add(point1);
