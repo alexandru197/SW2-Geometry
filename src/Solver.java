@@ -30,7 +30,7 @@ public class Solver {
     }
 
     public void solve() {
-        Collections.sort(furniture, new AreaComporator());
+        Collections.sort(furniture, new CostComporator());
         //Collections.shuffle(furniture);
 
         double minRoomX = room.minX();
