@@ -6,7 +6,11 @@
 <script type="text/javascript" src="jsxgraphcore.js"></script>
 </head>
 <body onload="myFunction()">
-
+<form action="visualise.html">
+    <input type="submit" value="Go to Solution" />
+</form><form action="index.html">
+    <input type="submit" value="Go to Initial Problem" />
+</form>
 <jsxgraph box="jxgbox" width="1000" height="1000" ></jsxgraph>
 
 <script>
@@ -15,1361 +19,664 @@
            var shape; 
 
 
-var p1 = b1.create('point', [-37.77503648527127, 0.0], {name:'',size:0});
-var p2 = b1.create('point', [-38.641950695263205, -0.4984573728154282], {name:'',size:0});
-var p3 = b1.create('point', [-42.13115230497121, 5.569942097128118], {name:'',size:0});
-var p4 = b1.create('point', [-42.99806651496314, 5.07148472431269], {name:'',size:0});
-var p5 = b1.create('point', [-39.508864905255145, -0.9969147456308564], {name:'',size:0});
-var p6 = b1.create('point', [-40.37577911524708, -1.4953721184462845], {name:'',size:0});
-var p7 = b1.create('point', [-38.880406996800794, -4.09611474842209], {name:'',size:0});
-var p8 = b1.create('point', [-38.01349278680886, -3.597657375606662], {name:'',size:0});
-var p9 = b1.create('point', [-34.524291177100864, -9.666056845550209], {name:'',size:0});
-var p10 = b1.create('point', [-33.65737696710893, -9.167599472734782], {name:'',size:0});
-var p11 = b1.create('point', [-37.14657857681692, -3.0992000027912336], {name:'',size:0});
-var p12 = b1.create('point', [-36.27966436682499, -2.600742629975805], {name:'',size:0});
-var p13 = b1.create('point', [-36.77812173964041, -1.73382841998387], {name:'',size:0});
-var p14 = b1.create('point', [-35.044293319656546, -0.7369136743530157], {name:'',size:0});
-var p15 = b1.create('point', [-19.09365738956283, -28.478168394094936], {name:'',size:0});
-var p16 = b1.create('point', [-18.226743179570907, -27.979711021279513], {name:'',size:0});
-var p17 = b1.create('point', [-12.245254705785744, -38.38268154118272], {name:'',size:0});
-var p18 = b1.create('point', [-10.511426285801896, -37.38576679555188], {name:'',size:0});
-var p19 = b1.create('point', [-12.006798404248165, -34.78502416557606], {name:'',size:0});
-var p20 = b1.create('point', [-5.938398934304644, -31.295822555868085], {name:'',size:0});
-var p21 = b1.create('point', [-6.4368563071200775, -30.428908345876156], {name:'',size:0});
-var p22 = b1.create('point', [-12.505255777063617, -33.91810995558415], {name:'',size:0});
-var p23 = b1.create('point', [-13.003713149879058, -33.05119574559221], {name:'',size:0});
-var p24 = b1.create('point', [0.0, -25.574335153360764], {name:'',size:0});
-var p25 = b1.create('point', [-2.492286864077144, -21.239764103401097], {name:'',size:0});
-var p26 = b1.create('point', [-15.496000013956177, -28.71662469563252], {name:'',size:0});
-var p27 = b1.create('point', [-16.492914759587034, -26.982796275648653], {name:'',size:0});
-var p28 = b1.create('point', [-15.626000549595101, -26.48433890283323], {name:'',size:0});
-var p29 = b1.create('point', [-31.576636479688805, 1.2569158169086998], {name:'',size:0});
-var p30 = b1.create('point', [-30.70972226969687, 1.755373189724127], {name:'',size:0});
-var p31 = b1.create('point', [-31.2081796425123, 2.6222873997160625], {name:'',size:0});
-var p32 = b1.create('point', [-37.27657911245584, -0.866914209991935], {name:'',size:0});
-shape = b1.create('polygon',[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32], {fillColor: "red",  fillOpacity: 0.8}); 
+var p1 = b1.create('point', [-10.0, 0.0], {name:'',size:0});
+var p2 = b1.create('point', [0.0, 0.0], {name:'',size:0});
+var p3 = b1.create('point', [0.0, 10.0], {name:'',size:0});
+var p4 = b1.create('point', [-10.0, 10.0], {name:'',size:0});
+shape = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "red",  fillOpacity: 0.8}); 
 
 
-p1 = b1.create('point', [58.95591792259104, 0.0], {name:'',size:0});
-p2 = b1.create('point', [56.014688351773295, -1.8971474934087869], {name:'',size:0});
-p3 = b1.create('point', [57.91183584518208, -4.838377064226536], {name:'',size:0});
-p4 = b1.create('point', [60.85306541599983, -2.9412295708177485], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
-
-
-p1 = b1.create('point', [67.9422013519476, 0.0], {name:'',size:0});
-p2 = b1.create('point', [70.21798473931763, 3.289499958013467], {name:'',size:0});
-p3 = b1.create('point', [66.92848478130416, 5.565283345383495], {name:'',size:0});
-p4 = b1.create('point', [64.65270139393414, 2.2757833873700286], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [82.0080694462081, 0.0], {name:'',size:0});
-p2 = b1.create('point', [85.45244926276013, -0.621488277708467], {name:'',size:0});
-p3 = b1.create('point', [86.07393754046859, 2.8228915388435594], {name:'',size:0});
-p4 = b1.create('point', [82.62955772391656, 3.4443798165520256], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
-
-
-p1 = b1.create('point', [85.86810870611768, 0.0], {name:'',size:0});
-p2 = b1.create('point', [84.55175900629271, 4.823611040265447], {name:'',size:0});
-p3 = b1.create('point', [79.72814796602727, 3.507261340440473], {name:'',size:0});
-p4 = b1.create('point', [81.04449766585223, -1.3163496998249735], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [97.12800885772643, 0.0], {name:'',size:0});
-p2 = b1.create('point', [98.07914875590079, -0.3087602534343762], {name:'',size:0});
-p3 = b1.create('point', [98.38790900933517, 0.6423796447399882], {name:'',size:0});
-p4 = b1.create('point', [97.4367691111608, 0.9511398981743642], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [107.56745995733942, 0.0], {name:'',size:0});
-p2 = b1.create('point', [107.11508381635632, -0.8918272405960901], {name:'',size:0});
-p3 = b1.create('point', [108.0069110569524, -1.3442033815791925], {name:'',size:0});
-p4 = b1.create('point', [108.45928719793551, -0.4523761409831023], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [117.57562848989191, 0.0], {name:'',size:0});
-p2 = b1.create('point', [120.40813693205992, 2.824339909615515], {name:'',size:0});
-p3 = b1.create('point', [117.5837970224444, 5.6568483517835215], {name:'',size:0});
-p4 = b1.create('point', [114.7512885802764, 2.832508442168006], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [127.20669260219312, 0.0], {name:'',size:0});
-p2 = b1.create('point', [126.3396035499007, -0.4981531645936163], {name:'',size:0});
-p3 = b1.create('point', [126.83775671449432, -1.3652422168860354], {name:'',size:0});
-p4 = b1.create('point', [127.70484576678673, -0.8670890522924191], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [142.91447648706463, 0.0], {name:'',size:0});
-p2 = b1.create('point', [143.68143268997696, -4.940827681959198], {name:'',size:0});
-p3 = b1.create('point', [148.62226037193616, -4.173871479046871], {name:'',size:0});
-p4 = b1.create('point', [147.85530416902384, 0.7669562029123279], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [151.50030440088037, 0.0], {name:'',size:0});
-p2 = b1.create('point', [150.78780285556667, 0.7016705408705612], {name:'',size:0});
-p3 = b1.create('point', [150.0861323146961, -0.010831004443141185], {name:'',size:0});
-p4 = b1.create('point', [150.7986338600098, -0.7125015453137025], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [161.53572988600376, 0.0], {name:'',size:0});
-p2 = b1.create('point', [162.96754526230563, 1.3963898911784978], {name:'',size:0});
-p3 = b1.create('point', [161.57115537112716, 2.828205267480381], {name:'',size:0});
-p4 = b1.create('point', [160.13933999482526, 1.4318153763018833], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [170.45284018667164, 0.0], {name:'',size:0});
-p2 = b1.create('point', [170.3661892186378, 0.9962387312982757], {name:'',size:0});
-p3 = b1.create('point', [169.3699504873395, 0.909587763264433], {name:'',size:0});
-p4 = b1.create('point', [169.45660145537337, -0.08665096803384273], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [178.65978448686465, 0.0], {name:'',size:0});
-p2 = b1.create('point', [175.84069641310668, -1.0260323739509936], {name:'',size:0});
-p3 = b1.create('point', [176.86672878705767, -3.845120447708975], {name:'',size:0});
-p4 = b1.create('point', [179.68581686081563, -2.8190880737579818], {name:'',size:0});
+p1 = b1.create('point', [63.0, 0.0], {name:'',size:0});
+p2 = b1.create('point', [66.0, 0.0], {name:'',size:0});
+p3 = b1.create('point', [66.0, 3.0], {name:'',size:0});
+p4 = b1.create('point', [63.0, 3.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
 
 
-p1 = b1.create('point', [189.83297106181288, 0.0], {name:'',size:0});
-p2 = b1.create('point', [190.02471207932984, -0.9814455574312609], {name:'',size:0});
-p3 = b1.create('point', [191.00615763676112, -0.7897045399142962], {name:'',size:0});
-p4 = b1.create('point', [190.81441661924416, 0.19174101751696562], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [197.58890613227905, 0.0], {name:'',size:0});
-p2 = b1.create('point', [197.32771229815614, 1.9828710954109388], {name:'',size:0});
-p3 = b1.create('point', [195.34484120274522, 1.7216772612880344], {name:'',size:0});
-p4 = b1.create('point', [195.60603503686812, -0.2611938341229045], {name:'',size:0});
+p1 = b1.create('point', [75.0, 0.0], {name:'',size:0});
+p2 = b1.create('point', [77.0, 0.0], {name:'',size:0});
+p3 = b1.create('point', [77.0, 2.0], {name:'',size:0});
+p4 = b1.create('point', [75.0, 2.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [206.56678376022, 0.0], {name:'',size:0});
-p2 = b1.create('point', [205.56703405976222, 0.0223726716012573], {name:'',size:0});
-p3 = b1.create('point', [205.54466138816096, -0.9773770288565236], {name:'',size:0});
-p4 = b1.create('point', [206.54441108861874, -0.9997497004577808], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [215.35264884309856, 0.0], {name:'',size:0});
-p2 = b1.create('point', [214.38299470420247, 0.24448077822533718], {name:'',size:0});
-p3 = b1.create('point', [214.13851392597712, -0.725173360670761], {name:'',size:0});
-p4 = b1.create('point', [215.10816806487324, -0.9696541388960982], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [222.37326729813466, 0.0], {name:'',size:0});
-p2 = b1.create('point', [217.56169821035678, -10.99312525688397], {name:'',size:0});
-p3 = b1.create('point', [219.39388575317076, -11.795053438180284], {name:'',size:0});
-p4 = b1.create('point', [224.20545484094865, -0.801928181296315], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.54});
-
-
-p1 = b1.create('point', [233.72472745267376, 0.0], {name:'',size:0});
-p2 = b1.create('point', [234.1921575955379, -0.8840300116749447], {name:'',size:0});
-p3 = b1.create('point', [235.07618760721286, -0.41659986881079736], {name:'',size:0});
-p4 = b1.create('point', [234.6087574643487, 0.4674301428641476], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [244.81693132347624, 0.0], {name:'',size:0});
-p2 = b1.create('point', [244.05851316468537, -1.8506220295933593], {name:'',size:0});
-p3 = b1.create('point', [245.90913519427872, -2.609040188384244], {name:'',size:0});
-p4 = b1.create('point', [246.6675533530696, -0.7584181587908847], {name:'',size:0});
+p1 = b1.create('point', [87.0, 0.0], {name:'',size:0});
+p2 = b1.create('point', [89.0, 0.0], {name:'',size:0});
+p3 = b1.create('point', [89.0, 2.0], {name:'',size:0});
+p4 = b1.create('point', [87.0, 2.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [256.61063780304397, 0.0], {name:'',size:0});
-p2 = b1.create('point', [260.1899627139344, 1.7856184313227013], {name:'',size:0});
-p3 = b1.create('point', [258.4043442826117, 5.364943342213113], {name:'',size:0});
-p4 = b1.create('point', [254.82501937172128, 3.579324910890412], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [265.3531924183492, 0.0], {name:'',size:0});
-p2 = b1.create('point', [265.99124033512066, 1.8954933014662805], {name:'',size:0});
-p3 = b1.create('point', [264.0957470336544, 2.5335412182377883], {name:'',size:0});
-p4 = b1.create('point', [263.4576991168829, 0.6380479167715077], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [276.68452539388863, 0.0], {name:'',size:0});
-p2 = b1.create('point', [277.1116795610954, -0.9041788083326827], {name:'',size:0});
-p3 = b1.create('point', [278.0158583694281, -0.4770246411259356], {name:'',size:0});
-p4 = b1.create('point', [277.5887042022213, 0.4271541672067476], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [288.3008235569221, 0.0], {name:'',size:0});
-p2 = b1.create('point', [292.5509045177827, 2.633782797827135], {name:'',size:0});
-p3 = b1.create('point', [289.9171217199556, 6.883863758687748], {name:'',size:0});
-p4 = b1.create('point', [285.667040759095, 4.250080960860613], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [15.198988210022215, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [10.20279908163916, 9.200085025425814], {name:'',size:0});
-p3 = b1.create('point', [10.39797642004443, 4.203895897042758], {name:'',size:0});
-p4 = b1.create('point', [15.394165548427484, 4.399073235448028], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [28.97513193028162, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [24.78577138428895, 1.4297580975790085], {name:'',size:0});
-p3 = b1.create('point', [32.751275650541025, -2.759602448413661], {name:'',size:0});
-p4 = b1.create('point', [36.940636196533696, 5.205901817838415], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.11});
-
-
-p1 = b1.create('point', [37.78760959066105, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [36.809859263158096, 9.605034375948701], {name:'',size:0});
-p3 = b1.create('point', [36.60008725104048, 8.627284048445752], {name:'',size:0});
-p4 = b1.create('point', [37.57783757854343, 8.417512036328134], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [44.835791043401606, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [40.14714278006018, 7.6584326477491], {name:'',size:0});
-p3 = b1.create('point', [41.883972496142164, 2.9697843844076717], {name:'',size:0});
-p4 = b1.create('point', [46.572620759483584, 4.706614100489656], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [51.23199731292642, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [48.31065072257968, 10.07770950395954], {name:'',size:0});
-p3 = b1.create('point', [47.62820358245123, 7.156362913612805], {name:'',size:0});
-p4 = b1.create('point', [50.549550172797964, 6.473915773484348], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [59.3078664826506, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [59.382348286406035, 11.393874997862335], {name:'',size:0});
-p3 = b1.create('point', [57.38373565237479, 11.46835680161777], {name:'',size:0});
-p4 = b1.create('point', [57.30925384861935, 9.469744167586517], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [63.66342074753382, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [60.65395983408067, 12.03024718549472], {name:'',size:0});
-p3 = b1.create('point', [58.01897501241704, 9.02078627204157], {name:'',size:0});
-p4 = b1.create('point', [61.028435925870184, 6.385801450377935], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [74.86889421399266, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [78.23509045125247, 11.555985134632063], {name:'',size:0});
-p3 = b1.create('point', [76.0743676804515, 14.922181371891877], {name:'',size:0});
-p4 = b1.create('point', [72.70817144319169, 12.761458601090899], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [78.04650894139594, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [73.70592682911679, 11.877065524148644], {name:'',size:0});
-p3 = b1.create('point', [71.22412366879922, 7.536483411869491], {name:'',size:0});
-p4 = b1.create('point', [75.56470578107837, 5.05468025155193], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [84.8346726175931, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [81.84274332396323, 9.615169394004068], {name:'',size:0});
-p3 = b1.create('point', [81.62283629379026, 6.623240100374204], {name:'',size:0});
-p4 = b1.create('point', [84.61476558742011, 6.403333070201219], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [95.90354218863014, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [95.12863383347553, 7.551484437639434], {name:'',size:0});
-p3 = b1.create('point', [96.97241175966718, 6.776576082484826], {name:'',size:0});
-p4 = b1.create('point', [97.74732011482179, 8.620354008676475], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [104.6643116929745, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [104.38539711238884, 10.355578278901085], {name:'',size:0});
-p3 = b1.create('point', [103.42508119731885, 10.076663698315443], {name:'',size:0});
-p4 = b1.create('point', [103.7039957779045, 9.116347783245441], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [113.62865882105608, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [113.59234643704322, 10.394602851736634], {name:'',size:0});
-p3 = b1.create('point', [112.59300594913766, 10.358290467723773], {name:'',size:0});
-p4 = b1.create('point', [112.62931833315052, 9.358949979818224], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [120.02256088137102, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [121.2607311427497, 14.239530564894833], {name:'',size:0});
-p3 = b1.create('point', [116.41646294168596, 15.477700826273523], {name:'',size:0});
-p4 = b1.create('point', [115.17829268030727, 10.633432625209773], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [134.2535168170755, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [139.19303749210545, 14.355215539109235], {name:'',size:0});
-p3 = b1.create('point', [138.48447275278, 15.0608613498278], {name:'',size:0});
-p4 = b1.create('point', [133.54495207775005, 10.100908174549645], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.37});
-
-
-p1 = b1.create('point', [150.8355643296288, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [157.6477199080082, 11.006018824614051], {name:'',size:0});
-p3 = b1.create('point', [157.41761184218208, 11.979183907239683], {name:'',size:0});
-p4 = b1.create('point', [150.60545626380267, 10.368427446456716], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.37});
-
-
-p1 = b1.create('point', [167.17677502318134, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [171.91175300299417, 7.789029650091391], {name:'',size:0});
-p3 = b1.create('point', [173.51798571673385, 12.524007629904226], {name:'',size:0});
-p4 = b1.create('point', [168.78300773692104, 14.130240343643917], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [178.5906614716345, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [179.28239687813038, 8.673111321873826], {name:'',size:0});
-p3 = b1.create('point', [180.00454792008765, 9.364846728369725], {name:'',size:0});
-p4 = b1.create('point', [179.31281251359175, 10.086997770326983], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [189.71584702253847, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [189.85008320704173, 8.404312997430354], {name:'',size:0});
-p3 = b1.create('point', [190.84103257344245, 8.538549181933618], {name:'',size:0});
-p4 = b1.create('point', [190.7067963889392, 9.529498548334347], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [201.0934787718113, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [201.9420841669078, 8.866236009654724], {name:'',size:0});
-p3 = b1.create('point', [202.47111052108414, 9.714841404751212], {name:'',size:0});
-p4 = b1.create('point', [201.62250512598766, 10.243867758927573], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [204.31804500290687, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [201.94194776575165, 13.794598895580314], {name:'',size:0});
-p3 = b1.create('point', [197.54261123400244, 11.418501658425098], {name:'',size:0});
-p4 = b1.create('point', [199.91870847115763, 7.019165126675868], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [213.65446353147155, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [212.69824112800157, 9.102621431796422], {name:'',size:0});
-p3 = b1.create('point', [212.99088206003623, 8.146399028326453], {name:'',size:0});
-p4 = b1.create('point', [213.9471044635062, 8.439039960361114], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [227.83104951594103, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [231.82696730844003, 9.214594171860611], {name:'',size:0});
-p3 = b1.create('point', [232.00763550041052, 13.210511964359615], {name:'',size:0});
-p4 = b1.create('point', [228.01171770791152, 13.391180156330089], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [238.2289339755195, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [237.74933218374017, 8.517776112473243], {name:'',size:0});
-p3 = b1.create('point', [238.626818435098, 8.03817432069389], {name:'',size:0});
-p4 = b1.create('point', [239.10642022687736, 8.91566057205173], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [249.27524059678018, 9.395262363831083], {name:'',size:0});
-p2 = b1.create('point', [249.3226727563393, 8.396387902129536], {name:'',size:0});
-p3 = b1.create('point', [250.32154721804088, 8.44382006168867], {name:'',size:0});
-p4 = b1.create('point', [250.27411505848173, 9.44269452339022], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [17.324011295161487, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [16.44402470784472, 20.58652684518391], {name:'',size:0});
-p3 = b1.create('point', [14.648022590322974, 19.70654025786714], {name:'',size:0});
-p4 = b1.create('point', [15.528009177639744, 17.9105381403454], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [29.273944383522476, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [33.64735766668959, 21.214004922468288], {name:'',size:0});
-p3 = b1.create('point', [31.223877471883462, 25.587418205635394], {name:'',size:0});
-p4 = b1.create('point', [26.85046418871636, 23.163938010829273], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [40.16211999740385, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [37.098675050438075, 14.838904166815025], {name:'',size:0});
-p3 = b1.create('point', [41.05029561128522, 11.775459219849253], {name:'',size:0});
-p4 = b1.create('point', [44.11374055825099, 15.727079780696394], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [51.57611621183889, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [52.27071769085163, 18.07112999223988], {name:'',size:0});
-p3 = b1.create('point', [52.990112426273924, 18.76573147125263], {name:'',size:0});
-p4 = b1.create('point', [52.29551094726117, 19.485126206674916], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [62.71955662045765, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [62.8751806724363, 17.802708371022053], {name:'',size:0});
-p3 = b1.create('point', [63.86299702907641, 17.9583324230007], {name:'',size:0});
-p4 = b1.create('point', [63.70737297709776, 18.946148779640815], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [69.2828144369892, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [66.32057808282012, 19.26503055696155], {name:'',size:0});
-p3 = b1.create('point', [65.84607225352075, 16.302794202792473], {name:'',size:0});
-p4 = b1.create('point', [68.80830860768982, 15.82828837349309], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [82.0942411609796, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [83.65477682081381, 17.539633663505956], {name:'',size:0});
-p3 = b1.create('point', [84.90566788497001, 19.10016932334015], {name:'',size:0});
-p4 = b1.create('point', [83.34513222513581, 20.35106038749636], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [91.47614099649816, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [91.80308466160642, 19.735568557251874], {name:'',size:0});
-p3 = b1.create('point', [90.85804083201671, 20.06251222236013], {name:'',size:0});
-p4 = b1.create('point', [90.53109716690845, 19.117468392770423], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [100.12390752492225, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [99.24074934500428, 19.259600019320114], {name:'',size:0});
-p3 = b1.create('point', [98.77167405334633, 18.37644183940215], {name:'',size:0});
-p4 = b1.create('point', [99.6548322332643, 17.907366547744203], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [109.61250799659064, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [108.69755287172948, 18.38696913113262], {name:'',size:0});
-p3 = b1.create('point', [109.10110846825903, 17.472014006271472], {name:'',size:0});
-p4 = b1.create('point', [110.01606359312018, 17.875569602801015], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [115.09599423191216, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [115.55808215370482, 23.76912641413331], {name:'',size:0});
-p3 = b1.create('point', [110.57948046723368, 24.231214335925973], {name:'',size:0});
-p4 = b1.create('point', [110.117392545441, 19.25261264945483], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [125.15020635110702, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [124.11699865452984, 17.703104911890136], {name:'',size:0});
-p3 = b1.create('point', [125.20441847030187, 16.669897215312957], {name:'',size:0});
-p4 = b1.create('point', [126.23762616687905, 17.757317031084987], {name:'',size:0});
+p1 = b1.create('point', [97.0, 0.0], {name:'',size:0});
+p2 = b1.create('point', [100.0, 0.0], {name:'',size:0});
+p3 = b1.create('point', [100.0, 5.0], {name:'',size:0});
+p4 = b1.create('point', [94.0, 5.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.53});
+
+
+p1 = b1.create('point', [108.5, 0.0], {name:'',size:0});
+p2 = b1.create('point', [110.0, 0.0], {name:'',size:0});
+p3 = b1.create('point', [110.0, 1.4999999999999998], {name:'',size:0});
+p4 = b1.create('point', [108.5, 1.5], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [137.0677219677202, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [136.13418395744787, 15.93947110077669], {name:'',size:0});
-p3 = b1.create('point', [138.98523758433336, 15.005933090504389], {name:'',size:0});
-p4 = b1.create('point', [139.91877559460568, 17.856986717389862], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [145.75672637415886, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [145.36641273681406, 19.71120668387868], {name:'',size:0});
-p3 = b1.create('point', [144.44573078059753, 19.320893046533868], {name:'',size:0});
-p4 = b1.create('point', [144.83604441794236, 18.400211090317356], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [157.13708597142914, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [157.67347420476904, 17.94655336373178], {name:'',size:0});
-p3 = b1.create('point', [158.51744556869943, 18.48294159707167], {name:'',size:0});
-p4 = b1.create('point', [157.98105733535954, 19.326912961002055], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [164.38493203696743, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [162.68264627117844, 19.8403928963349], {name:'',size:0});
-p3 = b1.create('point', [161.6327781025057, 18.13810713054593], {name:'',size:0});
-p4 = b1.create('point', [163.3350638682947, 17.08823896187319], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [173.8249148878573, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [174.93112245740662, 20.45674944632162], {name:'',size:0});
-p3 = b1.create('point', [173.26489773874715, 21.562957015870946], {name:'',size:0});
-p4 = b1.create('point', [172.15869016919783, 19.896732297211493], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [176.79451469170837, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [169.79870329175577, 19.03264630103645], {name:'',size:0});
-p3 = b1.create('point', [169.76411449555945, 18.033244672471792], {name:'',size:0});
-p4 = b1.create('point', [176.75992589551205, 17.791123099097508], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.37});
-
-
-p1 = b1.create('point', [183.19660057427916, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [182.52181143046914, 21.713649701281348], {name:'',size:0});
-p3 = b1.create('point', [179.59868645684995, 21.038860557471317], {name:'',size:0});
-p4 = b1.create('point', [180.27347560066, 18.11573558385214], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [191.96830671692084, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [188.95669789073548, 17.007209758835145], {name:'',size:0});
-p3 = b1.create('point', [190.7400128595625, 13.9956009326498], {name:'',size:0});
-p4 = b1.create('point', [193.75162168574786, 15.778915901476822], {name:'',size:0});
+p1 = b1.create('point', [122.0, 0.0], {name:'',size:0});
+p2 = b1.create('point', [125.5, 0.0], {name:'',size:0});
+p3 = b1.create('point', [125.5, 3.4999999999999996], {name:'',size:0});
+p4 = b1.create('point', [122.0, 3.5], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
 
 
-p1 = b1.create('point', [205.3297496011718, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [203.8999766398335, 13.999308882072878], {name:'',size:0});
-p3 = b1.create('point', [208.6911924854228, 12.569535920734566], {name:'',size:0});
-p4 = b1.create('point', [210.1209654467611, 17.360751766323855], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [220.92957531834068, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [224.1300976929548, 16.391221385107414], {name:'',size:0});
-p3 = b1.create('point', [226.52940103550955, 19.591743759721535], {name:'',size:0});
-p4 = b1.create('point', [223.32887866089544, 21.991047102276287], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [226.89958319949093, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [218.84804915207144, 14.76898279909241], {name:'',size:0});
-p3 = b1.create('point', [222.8695910806412, 6.71744875167291], {name:'',size:0});
-p4 = b1.create('point', [230.92112512806068, 10.738990680242665], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.11});
-
-
-p1 = b1.create('point', [234.73033766191853, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [231.82264236318994, 18.05207496650599], {name:'',size:0});
-p3 = b1.create('point', [232.56109212434612, 15.144379667777393], {name:'',size:0});
-p4 = b1.create('point', [235.4687874230747, 15.882829428933569], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [245.76257605078814, 18.790524727662167], {name:'',size:0});
-p2 = b1.create('point', [246.76203878468112, 18.75774907268555], {name:'',size:0});
-p3 = b1.create('point', [246.79481443965776, 19.757211806578542], {name:'',size:0});
-p4 = b1.create('point', [245.79535170576474, 19.789987461555157], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [26.986355965851946, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [29.933908088319274, 24.146983248108633], {name:'',size:0});
-p3 = b1.create('point', [33.97271193170389, 27.094535370575965], {name:'',size:0});
-p4 = b1.create('point', [31.025159809236563, 31.13333921396058], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [31.610150630327848, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [26.984501093835483, 33.43967768471538], {name:'',size:0});
-p3 = b1.create('point', [26.23394529480375, 32.77887060807361], {name:'',size:0});
-p4 = b1.create('point', [30.859594831296114, 27.524980014851483], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.37});
-
-
-p1 = b1.create('point', [42.99770018439446, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [43.828137168172674, 27.628674521204854], {name:'',size:0});
-p3 = b1.create('point', [44.38524973846107, 28.45911150498307], {name:'',size:0});
-p4 = b1.create('point', [43.55481275468286, 29.016224075271463], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [52.50656058681561, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [50.86826128308902, 27.03862738534551], {name:'',size:0});
-p3 = b1.create('point', [52.01542098923676, 25.40032808161892], {name:'',size:0});
-p4 = b1.create('point', [53.65372029296335, 26.54748778776666], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [73.47140532362292, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [75.7222576441354, 19.47179467519843], {name:'',size:0});
-p3 = b1.create('point', [84.43625006043021, 21.722646995710917], {name:'',size:0});
-p4 = b1.create('point', [82.18539773991773, 30.436639412005736], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.11});
-
-
-p1 = b1.create('point', [81.93641381703377, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [83.52177808266823, 31.30614286371687], {name:'',size:0});
-p3 = b1.create('point', [80.40142231044462, 32.89150712935134], {name:'',size:0});
-p4 = b1.create('point', [78.81605804481015, 29.771151357127717], {name:'',size:0});
+p1 = b1.create('point', [135.5, 0.0], {name:'',size:0});
+p2 = b1.create('point', [139.0, 0.0], {name:'',size:0});
+p3 = b1.create('point', [139.0, 3.4999999999999996], {name:'',size:0});
+p4 = b1.create('point', [135.5, 3.5], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
 
 
-p1 = b1.create('point', [75.93690166627965, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [67.93690166627965, 28.362484894929896], {name:'',size:0});
-p3 = b1.create('point', [35.93738951552553, 32.36242391377417], {name:'',size:0});
-p4 = b1.create('point', [35.95947674095512, 32.18572611033751], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.58});
+p1 = b1.create('point', [142.5, 0.0], {name:'',size:0});
+p2 = b1.create('point', [142.5, 5.0], {name:'',size:0});
+p3 = b1.create('point', [139.5, 5.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3], {fillColor: "purple",  fillOpacity: 0.38});
 
 
-p1 = b1.create('point', [79.079528534416, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [79.23418748326503, 27.197819172205932], {name:'',size:0});
-p3 = b1.create('point', [80.22215540255236, 27.35247812105497], {name:'',size:0});
-p4 = b1.create('point', [80.06749645370331, 28.340446040342286], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
+p1 = b1.create('point', [154.97886898685567, 0.0], {name:'',size:0});
+p2 = b1.create('point', [157.45773797371135, 0.0], {name:'',size:0});
+p3 = b1.create('point', [157.45773797371135, 2.4788689868556624], {name:'',size:0});
+p4 = b1.create('point', [154.97886898685567, 2.4788689868556624], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
 
 
-p1 = b1.create('point', [85.81893003964468, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [85.54587961394714, 31.173335160567014], {name:'',size:0});
-p3 = b1.create('point', [82.55833154487337, 30.900284734869462], {name:'',size:0});
-p4 = b1.create('point', [82.83138197057092, 27.9127366657957], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [93.607794059096, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [94.71643459985046, 31.5055636127964], {name:'',size:0});
-p3 = b1.create('point', [91.3966580785473, 32.614204153550865], {name:'',size:0});
-p4 = b1.create('point', [90.28801753779284, 29.294427632247714], {name:'',size:0});
+p1 = b1.create('point', [168.47886898685567, 0.0], {name:'',size:0});
+p2 = b1.create('point', [171.97886898685567, 0.0], {name:'',size:0});
+p3 = b1.create('point', [171.97886898685567, 3.4999999999999996], {name:'',size:0});
+p4 = b1.create('point', [168.47886898685567, 3.5], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
 
 
-p1 = b1.create('point', [106.02986153926794, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [106.51055475578057, 26.244412827833937], {name:'',size:0});
-p3 = b1.create('point', [108.45192901943989, 26.725106044346564], {name:'',size:0});
-p4 = b1.create('point', [107.97123580292725, 28.66648030800588], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [111.38492074000825, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [111.72818311821703, 33.17399026896171], {name:'',size:0});
-p3 = b1.create('point', [106.73997994074857, 33.51725264717049], {name:'',size:0});
-p4 = b1.create('point', [106.39671756253979, 28.529049469702024], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [123.06992296401594, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [122.7765579411816, 26.2074198446512], {name:'',size:0});
-p3 = b1.create('point', [124.75492518802363, 25.91405482181684], {name:'',size:0});
-p4 = b1.create('point', [125.048290210858, 27.89242206865889], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [134.05639449752638, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [134.04295632732274, 27.185877387779172], {name:'',size:0});
-p3 = b1.create('point', [135.04286603103682, 27.172439217575526], {name:'',size:0});
-p4 = b1.create('point', [135.05630420124047, 28.172348921289608], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [145.36438168861375, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [146.28724770183513, 27.80066591362725], {name:'',size:0});
-p3 = b1.create('point', [146.6723688797011, 28.72353192684862], {name:'',size:0});
-p4 = b1.create('point', [145.74950286647976, 29.10865310471462], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [157.21842690776987, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [159.2134518962456, 28.326766860812846], {name:'',size:0});
-p3 = b1.create('point', [159.07247212692602, 30.321791849288577], {name:'',size:0});
-p4 = b1.create('point', [157.07744713845028, 30.18081207996898], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [165.62904343436958, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [166.0041658041071, 30.15029293463104], {name:'',size:0});
-p3 = b1.create('point', [164.0396599609693, 30.525415304368543], {name:'',size:0});
-p4 = b1.create('point', [163.66453759123178, 28.560909461230754], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [173.70954132339602, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [171.71109978875194, 28.106847667822713], {name:'',size:0});
-p3 = b1.create('point', [171.79003921242247, 26.10840613317864], {name:'',size:0});
-p4 = b1.create('point', [173.78848074706656, 26.187345556849174], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [181.0695570813579, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [179.24200136782298, 28.998215619996433], {name:'',size:0});
-p3 = b1.create('point', [178.4295728393198, 27.170659906461506], {name:'',size:0});
-p4 = b1.create('point', [180.25712855285474, 26.358231377958322], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [190.08813438802667, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [190.10654225554728, 29.18561765234511], {name:'',size:0});
-p3 = b1.create('point', [189.10671169469543, 29.20402551986572], {name:'',size:0});
-p4 = b1.create('point', [189.08830382717483, 28.20419495901386], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [195.85467753802544, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [193.8774509939957, 30.442017397464728], {name:'',size:0});
-p3 = b1.create('point', [191.6212206880242, 28.46479085343497], {name:'',size:0});
-p4 = b1.create('point', [193.59844723205396, 26.208560547463495], {name:'',size:0});
+p1 = b1.create('point', [181.47886898685567, 0.0], {name:'',size:0});
+p2 = b1.create('point', [184.47886898685567, 0.0], {name:'',size:0});
+p3 = b1.create('point', [184.47886898685567, 3.0], {name:'',size:0});
+p4 = b1.create('point', [181.47886898685567, 3.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
 
 
-p1 = b1.create('point', [211.19306251287995, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [214.7978892584775, 26.452228862236318], {name:'',size:0});
-p3 = b1.create('point', [216.53144748773445, 30.057055607833888], {name:'',size:0});
-p4 = b1.create('point', [212.9266207421369, 31.79061383709082], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [222.42265194413133, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [224.60251724581653, 34.83771818452998], {name:'',size:0});
-p3 = b1.create('point', [223.65224137538272, 35.14912751334215], {name:'',size:0});
-p4 = b1.create('point', [221.47237607369752, 28.49719642030542], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.37});
-
-
-p1 = b1.create('point', [233.3394327918999, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [235.8690253351562, 29.798598786981003], {name:'',size:0});
-p3 = b1.create('point', [234.25621363966846, 32.32819133023731], {name:'',size:0});
-p4 = b1.create('point', [231.72662109641215, 30.71537963474956], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [244.6385499333685, 28.18578709149325], {name:'',size:0});
-p2 = b1.create('point', [245.56752515211363, 27.815645168769773], {name:'',size:0});
-p3 = b1.create('point', [245.9376670748371, 28.744620387514907], {name:'',size:0});
-p4 = b1.create('point', [245.00869185609199, 29.114762310238383], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [16.626626490638262, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [16.226441889699903, 40.554238363747714], {name:'',size:0});
-p3 = b1.create('point', [13.253252981276525, 40.154053762809355], {name:'',size:0});
-p4 = b1.create('point', [13.653437582214883, 37.18086485438597], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [25.83226482549407, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [26.020103126145273, 38.56324942111972], {name:'',size:0});
-p3 = b1.create('point', [25.03790316034988, 38.75108772177093], {name:'',size:0});
-p4 = b1.create('point', [24.85006485969868, 37.768887755975534], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [29.966696218192705, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [22.531315880856695, 28.16217907511647], {name:'',size:0});
-p3 = b1.create('point', [24.10112761089134, 26.922949018893803], {name:'',size:0});
-p4 = b1.create('point', [31.53650794822735, 36.34181939910167], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.54});
-
-
-p1 = b1.create('point', [39.09715006493353, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [37.31665325297115, 36.670098796621126], {name:'',size:0});
-p3 = b1.create('point', [38.22760391167436, 34.889601984658746], {name:'',size:0});
-p4 = b1.create('point', [40.00810072363674, 35.800552643361954], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [54.42412301489588, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [59.4126556824488, 37.24260917291489], {name:'',size:0});
-p3 = b1.create('point', [59.75109596485824, 42.23114184046781], {name:'',size:0});
-p4 = b1.create('point', [54.76256329730533, 42.56958212287725], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [64.48955483106893, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [65.9361058318583, 38.962168639940664], {name:'',size:0});
-p3 = b1.create('point', [64.55498664724198, 40.408719640730034], {name:'',size:0});
-p4 = b1.create('point', [63.1084356464526, 39.0276004561137], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [73.34947791578446, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [72.36104233003442, 37.73269078485876], {name:'',size:0});
-p3 = b1.create('point', [72.2094010005, 36.744255199108714], {name:'',size:0});
-p4 = b1.create('point', [73.19783658625003, 36.592613869574286], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [87.92771963411515, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [92.91126542118889, 37.98635352406738], {name:'',size:0});
-p3 = b1.create('point', [92.50596135244584, 42.96989931114111], {name:'',size:0});
-p4 = b1.create('point', [87.5224155653721, 42.56459524239806], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [96.84126180007958, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [96.75069428379715, 38.57693977307746], {name:'',size:0});
-p3 = b1.create('point', [95.75480396604401, 38.48637225679502], {name:'',size:0});
-p4 = b1.create('point', [95.84537148232644, 37.49048193904189], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [106.22783034653608, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [105.28399181923771, 37.25064238156946], {name:'',size:0});
-p3 = b1.create('point', [105.6143988929926, 36.306803854271095], {name:'',size:0});
-p4 = b1.create('point', [106.55823742029095, 36.63721092802597], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [117.98407404593185, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [120.79323240928844, 38.63396411928516], {name:'',size:0});
-p3 = b1.create('point', [119.74031774532762, 41.44312248264175], {name:'',size:0});
-p4 = b1.create('point', [116.93115938197103, 40.39020781868092], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [130.77195520444928, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [131.9272964092413, 35.94850950159895], {name:'',size:0});
-p3 = b1.create('point', [133.5598363629667, 37.10385070639098], {name:'',size:0});
-p4 = b1.create('point', [132.40449515817468, 38.73639066011637], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [133.92901551444464, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [127.47236167655494, 40.28505042012891], {name:'',size:0});
-p3 = b1.create('point', [127.08607582443999, 39.36267130043038], {name:'',size:0});
-p4 = b1.create('point', [133.5427296623297, 36.6586703356258], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.37});
-
-
-p1 = b1.create('point', [145.680092497772, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [146.43703319532062, 30.622095454873218], {name:'',size:0});
-p3 = b1.create('point', [147.43116948109935, 30.730229840237307], {name:'',size:0});
-p4 = b1.create('point', [146.67422878355072, 37.68918384068842], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.37});
-
-
-p1 = b1.create('point', [148.61288666668864, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [144.96244867389962, 40.99781729361865], {name:'',size:0});
-p3 = b1.create('point', [141.54568083560528, 37.34737930082964], {name:'',size:0});
-p4 = b1.create('point', [145.1961188283943, 33.93061146253531], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [159.94024956166896, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [160.35994958310917, 36.67338658178422], {name:'',size:0});
-p3 = b1.create('point', [161.2676124566493, 37.09308660322442], {name:'',size:0});
-p4 = b1.create('point', [160.84791243520908, 38.00074947676453], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [171.8929778431274, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [172.45495923240804, 36.19030256314654], {name:'',size:0});
-p3 = b1.create('point', [173.84570612458583, 36.752283952427184], {name:'',size:0});
-p4 = b1.create('point', [173.28372473530519, 38.14303084460498], {name:'',size:0});
+p1 = b1.create('point', [192.97886898685567, 0.0], {name:'',size:0});
+p2 = b1.create('point', [194.47886898685567, 0.0], {name:'',size:0});
+p3 = b1.create('point', [194.47886898685567, 1.4999999999999998], {name:'',size:0});
+p4 = b1.create('point', [192.97886898685567, 1.5], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [182.46794677226862, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [181.37074618866743, 35.90887994258192], {name:'',size:0});
-p3 = b1.create('point', [183.04291570140984, 34.811679358980726], {name:'',size:0});
-p4 = b1.create('point', [184.14011628501103, 36.48384887172314], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
+p1 = b1.create('point', [205.45773797371135, 0.0], {name:'',size:0});
+p2 = b1.create('point', [207.93660696056702, 0.0], {name:'',size:0});
+p3 = b1.create('point', [207.93660696056702, 2.4788689868556624], {name:'',size:0});
+p4 = b1.create('point', [205.45773797371135, 2.4788689868556624], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
 
 
-p1 = b1.create('point', [188.35056183970607, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [186.80351898915492, 40.1513915373357], {name:'',size:0});
-p3 = b1.create('point', [184.23317690714353, 38.60434868678453], {name:'',size:0});
-p4 = b1.create('point', [185.7802197576947, 36.03400660477317], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
+p1 = b1.create('point', [217.76289662285222, 0.0], {name:'',size:0});
+p2 = b1.create('point', [220.0680552719931, 0.0], {name:'',size:0});
+p3 = b1.create('point', [220.0680552719931, 2.3051586491408833], {name:'',size:0});
+p4 = b1.create('point', [217.76289662285222, 2.3051586491408833], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.35});
 
 
-p1 = b1.create('point', [195.70505161119928, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [194.88261530302503, 39.404123375656894], {name:'',size:0});
-p3 = b1.create('point', [193.0595413826925, 38.581687067482655], {name:'',size:0});
-p4 = b1.create('point', [193.88197769086673, 36.75861314715009], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [206.58183014617327, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [204.58448238964635, 34.70692316382341], {name:'',size:0});
-p3 = b1.create('point', [207.45860868114727, 32.709575407296484], {name:'',size:0});
-p4 = b1.create('point', [209.4559564376742, 35.5837016987974], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
-
-
-p1 = b1.create('point', [215.82428358986135, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [214.8484083072246, 37.3627207289995], {name:'',size:0});
-p3 = b1.create('point', [215.06673703354943, 36.38684544636274], {name:'',size:0});
-p4 = b1.create('point', [216.0426123161862, 36.605174172687576], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [227.67038827817947, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [230.5034077346058, 38.56796422343252], {name:'',size:0});
-p3 = b1.create('point', [229.5164929664976, 41.40098367985882], {name:'',size:0});
-p4 = b1.create('point', [226.68347351007128, 40.41406891175063], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
-
-
-p1 = b1.create('point', [236.2589601917977, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [235.50888750521938, 38.24240485512776], {name:'',size:0});
-p3 = b1.create('point', [234.84753210541595, 37.492332168549424], {name:'',size:0});
-p4 = b1.create('point', [235.59760479199429, 36.83097676874599], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [249.35350585276694, 37.58104945532433], {name:'',size:0});
-p2 = b1.create('point', [253.26846675139822, 38.4014646929864], {name:'',size:0});
-p3 = b1.create('point', [252.44805151373617, 42.31642559161769], {name:'',size:0});
-p4 = b1.create('point', [248.53309061510487, 41.49601035395562], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [21.398397154637586, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [21.99213792297395, 46.17165543285419], {name:'',size:0});
-p3 = b1.create('point', [22.796794309275175, 46.765396201190555], {name:'',size:0});
-p4 = b1.create('point', [22.203053540938807, 47.57005258749178], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [32.6551574659463, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [32.95928713204081, 46.0236811739412], {name:'',size:0});
-p3 = b1.create('point', [33.91191777725501, 46.3278108400357], {name:'',size:0});
-p4 = b1.create('point', [33.60778811116052, 47.280441485249916], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [44.25369519243016, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [46.21965565341845, 47.34373455365985], {name:'',size:0});
-p3 = b1.create('point', [45.85223291891401, 49.309695014648135], {name:'',size:0});
-p4 = b1.create('point', [43.88627245792572, 48.942272280143705], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [56.56461896226946, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [56.90466203915369, 45.00543112620033], {name:'',size:0});
-p3 = b1.create('point', [58.87554273210877, 45.34547420308456], {name:'',size:0});
-p4 = b1.create('point', [58.53549965522455, 47.31635489603964], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [72.14895328227006, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [77.10994559672976, 46.35296981361453], {name:'',size:0});
-p3 = b1.create('point', [77.73328760227065, 51.31396212807424], {name:'',size:0});
-p4 = b1.create('point', [72.77229528781093, 51.93730413361512], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [80.89320688791159, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [81.12018762460875, 48.45903895021103], {name:'',size:0});
-p3 = b1.create('point', [79.63746049355314, 48.68601968690818], {name:'',size:0});
-p4 = b1.create('point', [79.41047975685598, 47.20329255585257], {name:'',size:0});
+p1 = b1.create('point', [229.26289662285222, 0.0], {name:'',size:0});
+p2 = b1.create('point', [230.76289662285222, 0.0], {name:'',size:0});
+p3 = b1.create('point', [230.76289662285222, 1.4999999999999998], {name:'',size:0});
+p4 = b1.create('point', [229.26289662285222, 1.5], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [94.37507717798552, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [97.32809516704557, 46.44745951814155], {name:'',size:0});
-p3 = b1.create('point', [97.85694746805945, 49.400477507201614], {name:'',size:0});
-p4 = b1.create('point', [94.90392947899937, 49.92932980821548], {name:'',size:0});
+p1 = b1.create('point', [242.26289662285222, 0.0], {name:'',size:0});
+p2 = b1.create('point', [245.26289662285222, 0.0], {name:'',size:0});
+p3 = b1.create('point', [245.26289662285222, 3.0], {name:'',size:0});
+p4 = b1.create('point', [242.26289662285222, 3.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
 
 
-p1 = b1.create('point', [110.83804481268517, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [116.77012021840284, 43.26006621628151], {name:'',size:0});
-p3 = b1.create('point', [117.30101244738482, 44.10750555995546], {name:'',size:0});
-p4 = b1.create('point', [111.36893704166715, 47.82375116282937], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.37});
+p1 = b1.create('point', [254.7417656097079, 0.0], {name:'',size:0});
+p2 = b1.create('point', [257.22063459656357, 0.0], {name:'',size:0});
+p3 = b1.create('point', [257.22063459656357, 2.4788689868556624], {name:'',size:0});
+p4 = b1.create('point', [254.7417656097079, 2.4788689868556624], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
 
 
-p1 = b1.create('point', [117.76324400942278, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [117.68748652077144, 49.97535513376646], {name:'',size:0});
-p3 = b1.create('point', [114.68844320616039, 49.89959764511513], {name:'',size:0});
-p4 = b1.create('point', [114.76420069481172, 46.90055433050408], {name:'',size:0});
+p1 = b1.create('point', [267.22063459656357, 0.0], {name:'',size:0});
+p2 = b1.create('point', [269.69950358341924, 0.0], {name:'',size:0});
+p3 = b1.create('point', [269.69950358341924, 2.4788689868556624], {name:'',size:0});
+p4 = b1.create('point', [267.22063459656357, 2.4788689868556624], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
+
+
+p1 = b1.create('point', [281.8309518948453, 0.0], {name:'',size:0});
+p2 = b1.create('point', [286.4412691931271, 0.0], {name:'',size:0});
+p3 = b1.create('point', [286.4412691931271, 4.610317298281767], {name:'',size:0});
+p4 = b1.create('point', [281.8309518948453, 4.610317298281767], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.51});
+
+
+p1 = b1.create('point', [293.8309518948453, 0.0], {name:'',size:0});
+p2 = b1.create('point', [295.8309518948453, 0.0], {name:'',size:0});
+p3 = b1.create('point', [295.8309518948453, 2.0], {name:'',size:0});
+p4 = b1.create('point', [293.8309518948453, 2.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
+
+
+p1 = b1.create('point', [306.8309518948453, 0.0], {name:'',size:0});
+p2 = b1.create('point', [309.8309518948453, 0.0], {name:'',size:0});
+p3 = b1.create('point', [309.8309518948453, 3.0], {name:'',size:0});
+p4 = b1.create('point', [306.8309518948453, 3.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
 
 
-p1 = b1.create('point', [128.62798949814638, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [127.71386537658792, 45.19744220887337], {name:'',size:0});
-p3 = b1.create('point', [129.49273498686998, 44.28331808731492], {name:'',size:0});
-p4 = b1.create('point', [130.40685910842842, 46.06218769759696], {name:'',size:0});
+p1 = b1.create('point', [318.3309518948453, 0.0], {name:'',size:0});
+p2 = b1.create('point', [319.8309518948453, 0.0], {name:'',size:0});
+p3 = b1.create('point', [319.8309518948453, 1.4999999999999998], {name:'',size:0});
+p4 = b1.create('point', [318.3309518948453, 1.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [332.3309518948453, 0.0], {name:'',size:0});
+p2 = b1.create('point', [336.3309518948453, 0.0], {name:'',size:0});
+p3 = b1.create('point', [336.3309518948453, 10.0], {name:'',size:0});
+p4 = b1.create('point', [332.3309518948453, 10.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.7});
+
+
+p1 = b1.create('point', [343.8309518948453, 0.0], {name:'',size:0});
+p2 = b1.create('point', [345.3309518948453, 0.0], {name:'',size:0});
+p3 = b1.create('point', [345.3309518948453, 1.4999999999999998], {name:'',size:0});
+p4 = b1.create('point', [343.8309518948453, 1.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [21.5, 6.0], {name:'',size:0});
+p2 = b1.create('point', [23.0, 6.0], {name:'',size:0});
+p3 = b1.create('point', [23.0, 7.5], {name:'',size:0});
+p4 = b1.create('point', [21.5, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [33.5, 6.0], {name:'',size:0});
+p2 = b1.create('point', [35.5, 6.0], {name:'',size:0});
+p3 = b1.create('point', [35.5, 8.0], {name:'',size:0});
+p4 = b1.create('point', [33.5, 8.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [137.77201654950284, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [137.90690446418594, 47.967172682482065], {name:'',size:0});
-p3 = b1.create('point', [136.9160436008593, 48.102060597165185], {name:'',size:0});
-p4 = b1.create('point', [136.7811556861762, 47.11119973383853], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [153.22097996439769, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [156.7051980904696, 45.01156653033248], {name:'',size:0});
-p3 = b1.create('point', [158.66994337929253, 48.495784656404396], {name:'',size:0});
-p4 = b1.create('point', [155.18572525322062, 50.46052994522733], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [164.6133547453615, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [165.4333287156249, 46.403911008455], {name:'',size:0});
-p3 = b1.create('point', [166.00572952632533, 47.22388497871839], {name:'',size:0});
-p4 = b1.create('point', [165.18575555606193, 47.7962857894188], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [176.09396609132224, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [175.62930391802908, 45.03103829990151], {name:'',size:0});
-p3 = b1.create('point', [177.57457743728298, 44.56637612660835], {name:'',size:0});
-p4 = b1.create('point', [178.03923961057615, 46.51164964586225], {name:'',size:0});
+p1 = b1.create('point', [45.5, 6.0], {name:'',size:0});
+p2 = b1.create('point', [47.5, 6.0], {name:'',size:0});
+p3 = b1.create('point', [47.5, 8.0], {name:'',size:0});
+p4 = b1.create('point', [45.5, 8.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [199.90102766026388, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [210.01592150550326, 35.89980864804864], {name:'',size:0});
-p3 = b1.create('point', [213.7080892292055, 39.2714399297951], {name:'',size:0});
-p4 = b1.create('point', [203.59319538396613, 50.34794310090187], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.05});
-
-
-p1 = b1.create('point', [210.77950125966248, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [211.77287796388944, 47.09121492398376], {name:'',size:0});
-p3 = b1.create('point', [211.65797485906108, 48.08459162821072], {name:'',size:0});
-p4 = b1.create('point', [210.66459815483412, 47.969688523382366], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [221.96592166607334, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [222.94397164738515, 46.76794139405638], {name:'',size:0});
-p3 = b1.create('point', [223.1523420724842, 47.7459913753682], {name:'',size:0});
-p4 = b1.create('point', [222.17429209117236, 47.95436180046723], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [230.56657364251114, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [229.96915557059728, 47.77824177080377], {name:'',size:0});
-p3 = b1.create('point', [229.16722561894895, 47.18082369888992], {name:'',size:0});
-p4 = b1.create('point', [229.76464369086278, 46.378893747241555], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [241.90204280680672, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [243.81642510495286, 47.55522495300598], {name:'',size:0});
-p3 = b1.create('point', [243.2375119711023, 49.46960725115213], {name:'',size:0});
-p4 = b1.create('point', [241.32312967295616, 48.89069411730156], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [250.53125294203585, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [249.67197935466265, 47.48782809655309], {name:'',size:0});
-p3 = b1.create('point', [249.16046307726495, 46.62855450917988], {name:'',size:0});
-p4 = b1.create('point', [250.01973666463817, 46.1170382317822], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [258.09247755427674, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [257.5893954181134, 48.912005070751164], {name:'',size:0});
-p3 = b1.create('point', [255.65370216651766, 48.40892293458783], {name:'',size:0});
-p4 = b1.create('point', [256.156784302681, 46.47322968299208], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [263.35469064176255, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [262.53122392039205, 50.89063201029913], {name:'',size:0});
-p3 = b1.create('point', [258.61690372924835, 50.06716528892865], {name:'',size:0});
-p4 = b1.create('point', [259.44037045061884, 46.15284509778493], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [272.8153420455496, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [273.19933109576607, 47.89964946558485], {name:'',size:0});
-p3 = b1.create('point', [272.2759934493366, 48.28363851580132], {name:'',size:0});
-p4 = b1.create('point', [271.89200439912014, 47.36030086937188], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [279.2441410844004, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [276.3132760388576, 47.616647734761855], {name:'',size:0});
-p3 = b1.create('point', [275.6729401232512, 44.685782689219074], {name:'',size:0});
-p4 = b1.create('point', [278.60380516879394, 44.04544677361264], {name:'',size:0});
+p1 = b1.create('point', [58.5, 6.0], {name:'',size:0});
+p2 = b1.create('point', [61.5, 6.0], {name:'',size:0});
+p3 = b1.create('point', [61.5, 9.0], {name:'',size:0});
+p4 = b1.create('point', [58.5, 9.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
 
 
-p1 = b1.create('point', [289.7490835980308, 46.97631181915541], {name:'',size:0});
-p2 = b1.create('point', [291.3930498294981, 48.11533553699235], {name:'',size:0});
-p3 = b1.create('point', [290.2540261116612, 49.759301768459686], {name:'',size:0});
-p4 = b1.create('point', [288.61005988019383, 48.62027805062275], {name:'',size:0});
+p1 = b1.create('point', [70.80515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [73.11031729828176, 6.0], {name:'',size:0});
+p3 = b1.create('point', [73.11031729828176, 8.305158649140884], {name:'',size:0});
+p4 = b1.create('point', [70.80515864914088, 8.305158649140884], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.35});
+
+
+p1 = b1.create('point', [82.30515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [83.80515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [83.80515864914088, 7.5], {name:'',size:0});
+p4 = b1.create('point', [82.30515864914088, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [94.30515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [96.30515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [96.30515864914088, 8.0], {name:'',size:0});
+p4 = b1.create('point', [94.30515864914088, 8.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [18.176604922838877, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [16.183793330078025, 56.202157667386764], {name:'',size:0});
-p3 = b1.create('point', [16.353209845677753, 54.20934607462591], {name:'',size:0});
-p4 = b1.create('point', [18.346021438438605, 54.37876259022564], {name:'',size:0});
+p1 = b1.create('point', [107.80515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [111.30515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [111.30515864914088, 9.5], {name:'',size:0});
+p4 = b1.create('point', [107.80515864914088, 9.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
+
+
+p1 = b1.create('point', [119.30515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [120.80515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [120.80515864914088, 7.5], {name:'',size:0});
+p4 = b1.create('point', [119.30515864914088, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [131.30515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [133.30515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [133.30515864914088, 8.0], {name:'',size:0});
+p4 = b1.create('point', [131.30515864914088, 8.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [29.237884630054456, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [29.3011687885401, 55.37357863425656], {name:'',size:0});
-p3 = b1.create('point', [30.299164337270035, 55.436862792742204], {name:'',size:0});
-p4 = b1.create('point', [30.23588017878439, 56.434858341472136], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
+p1 = b1.create('point', [142.80515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [144.30515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [144.30515864914088, 7.5], {name:'',size:0});
+p4 = b1.create('point', [142.80515864914088, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [36.415680997963534, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [34.91081530426146, 57.68891212137534], {name:'',size:0});
-p3 = b1.create('point', [33.593477365872616, 56.18404642767326], {name:'',size:0});
-p4 = b1.create('point', [35.09834305957469, 54.86670848928442], {name:'',size:0});
+p1 = b1.create('point', [154.30515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [155.80515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [155.80515864914088, 7.5], {name:'',size:0});
+p4 = b1.create('point', [154.30515864914088, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [165.80515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [167.30515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [167.30515864914088, 7.5], {name:'',size:0});
+p4 = b1.create('point', [165.80515864914088, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [177.80515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [179.80515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [179.80515864914088, 8.0], {name:'',size:0});
+p4 = b1.create('point', [177.80515864914088, 8.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [53.19594694598271, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [55.582586811628865, 51.97794810061347], {name:'',size:0});
-p3 = b1.create('point', [59.97621289400189, 54.36458796625962], {name:'',size:0});
-p4 = b1.create('point', [57.58957302835574, 58.758214048632645], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
+p1 = b1.create('point', [193.80515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [199.80515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [193.80515864914088, 16.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3], {fillColor: "purple",  fillOpacity: 0.6});
 
 
-p1 = b1.create('point', [101.02480255033173, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [93.02480255033173, 72.11146257121953], {name:'',size:0});
-p3 = b1.create('point', [120.8861721061516, 68.62879137674203], {name:'',size:0});
-p4 = b1.create('point', [122.85365815468074, 52.88890298850901], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.58});
-
-
-p1 = b1.create('point', [100.2196382056991, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [98.63604981829488, 57.59315014021491], {name:'',size:0});
-p3 = b1.create('point', [97.41447386106647, 56.00956175281069], {name:'',size:0});
-p4 = b1.create('point', [98.99806224847069, 54.78798579558228], {name:'',size:0});
+p1 = b1.create('point', [205.80515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [207.80515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [207.80515864914088, 8.0], {name:'',size:0});
+p4 = b1.create('point', [205.80515864914088, 8.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [107.94769582444856, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [110.15979414535816, 60.85561488514664], {name:'',size:0});
-p3 = b1.create('point', [105.67575344319802, 63.067713206056254], {name:'',size:0});
-p4 = b1.create('point', [103.46365512228842, 58.5836725038961], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
+p1 = b1.create('point', [217.30515864914088, 6.0], {name:'',size:0});
+p2 = b1.create('point', [218.80515864914088, 6.0], {name:'',size:0});
+p3 = b1.create('point', [218.80515864914088, 7.5], {name:'',size:0});
+p4 = b1.create('point', [217.30515864914088, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [119.36073784830525, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [120.09603488677905, 55.693829197603606], {name:'',size:0});
-p3 = b1.create('point', [120.77377987216194, 56.429126236077416], {name:'',size:0});
-p4 = b1.create('point', [120.03848283368814, 57.1068712214603], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
+p1 = b1.create('point', [229.78402763599655, 6.0], {name:'',size:0});
+p2 = b1.create('point', [232.26289662285222, 6.0], {name:'',size:0});
+p3 = b1.create('point', [232.26289662285222, 8.478868986855662], {name:'',size:0});
+p4 = b1.create('point', [229.78402763599655, 8.478868986855662], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
 
 
-p1 = b1.create('point', [128.70740804527725, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [127.75361473417009, 56.071110674907324], {name:'',size:0});
-p3 = b1.create('point', [128.05407824224926, 55.11731736380017], {name:'',size:0});
-p4 = b1.create('point', [129.0078715533564, 55.41778087187933], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
+p1 = b1.create('point', [242.26289662285222, 6.0], {name:'',size:0});
+p2 = b1.create('point', [244.7417656097079, 6.0], {name:'',size:0});
+p3 = b1.create('point', [244.7417656097079, 8.478868986855662], {name:'',size:0});
+p4 = b1.create('point', [242.26289662285222, 8.478868986855662], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
 
 
-p1 = b1.create('point', [138.10366051509624, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [138.44121792687318, 57.31287912494444], {name:'',size:0});
-p3 = b1.create('point', [137.49991298491523, 57.65043653672138], {name:'',size:0});
-p4 = b1.create('point', [137.16235557313829, 56.709131594763434], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [146.77916933556602, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [145.86907141307705, 56.78596744002773], {name:'',size:0});
-p3 = b1.create('point', [145.4546781560358, 55.87586951753875], {name:'',size:0});
-p4 = b1.create('point', [146.36477607852478, 55.46147626049751], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [157.96738534719447, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [158.17804103859729, 55.39401386276088], {name:'',size:0});
-p3 = b1.create('point', [159.1556013588229, 55.6046695541637], {name:'',size:0});
-p4 = b1.create('point', [158.9449456674201, 56.58222987438931], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [166.7333636363133, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [165.77095792817732, 56.64319018573168], {name:'',size:0});
-p3 = b1.create('point', [165.49934192543213, 55.6807844775957], {name:'',size:0});
-p4 = b1.create('point', [166.4617476335681, 55.40916847485051], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [176.33811412226862, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [176.81941826830746, 57.248127843070016], {name:'',size:0});
-p3 = b1.create('point', [175.94286460822394, 57.72943198910886], {name:'',size:0});
-p4 = b1.create('point', [175.4615604621851, 56.85287832902534], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [186.9441400763623, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [188.62852307470726, 57.44993122723779], {name:'',size:0});
-p3 = b1.create('point', [187.55016603045596, 59.13431422558276], {name:'',size:0});
-p4 = b1.create('point', [185.86578303211098, 58.055957181331465], {name:'',size:0});
+p1 = b1.create('point', [254.26289662285222, 6.0], {name:'',size:0});
+p2 = b1.create('point', [256.2628966228522, 6.0], {name:'',size:0});
+p3 = b1.create('point', [256.2628966228522, 8.0], {name:'',size:0});
+p4 = b1.create('point', [254.26289662285222, 8.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [195.82633610913723, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [194.83427298609274, 56.49731502716707], {name:'',size:0});
-p3 = b1.create('point', [194.70853214191217, 55.505251904122595], {name:'',size:0});
-p4 = b1.create('point', [195.70059526495666, 55.37951105994202], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
+p1 = b1.create('point', [265.7628966228522, 6.0], {name:'',size:0});
+p2 = b1.create('point', [267.2628966228522, 6.0], {name:'',size:0});
+p3 = b1.create('point', [267.2628966228522, 7.5], {name:'',size:0});
+p4 = b1.create('point', [265.7628966228522, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [205.33159038173144, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [203.6918071380387, 55.22653666669956], {name:'',size:0});
-p3 = b1.create('point', [204.83684465432566, 53.586753423006826], {name:'',size:0});
-p4 = b1.create('point', [206.47662789801836, 54.73179093929376], {name:'',size:0});
+p1 = b1.create('point', [280.373213921134, 6.0], {name:'',size:0});
+p2 = b1.create('point', [284.98353121941574, 6.0], {name:'',size:0});
+p3 = b1.create('point', [284.98353121941574, 10.610317298281768], {name:'',size:0});
+p4 = b1.create('point', [280.373213921134, 10.610317298281768], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.51});
+
+
+p1 = b1.create('point', [291.873213921134, 6.0], {name:'',size:0});
+p2 = b1.create('point', [293.373213921134, 6.0], {name:'',size:0});
+p3 = b1.create('point', [293.373213921134, 7.5], {name:'',size:0});
+p4 = b1.create('point', [291.873213921134, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [303.373213921134, 6.0], {name:'',size:0});
+p2 = b1.create('point', [304.873213921134, 6.0], {name:'',size:0});
+p3 = b1.create('point', [304.873213921134, 7.5], {name:'',size:0});
+p4 = b1.create('point', [303.373213921134, 7.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [315.85208290798965, 6.0], {name:'',size:0});
+p2 = b1.create('point', [318.3309518948453, 6.0], {name:'',size:0});
+p3 = b1.create('point', [318.3309518948453, 8.478868986855662], {name:'',size:0});
+p4 = b1.create('point', [315.85208290798965, 8.478868986855662], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
+
+
+p1 = b1.create('point', [21.5, 12.0], {name:'',size:0});
+p2 = b1.create('point', [23.0, 12.0], {name:'',size:0});
+p3 = b1.create('point', [23.0, 13.5], {name:'',size:0});
+p4 = b1.create('point', [21.5, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [33.0, 12.0], {name:'',size:0});
+p2 = b1.create('point', [34.5, 12.0], {name:'',size:0});
+p3 = b1.create('point', [34.5, 13.5], {name:'',size:0});
+p4 = b1.create('point', [33.0, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [45.47886898685566, 12.0], {name:'',size:0});
+p2 = b1.create('point', [47.95773797371132, 12.0], {name:'',size:0});
+p3 = b1.create('point', [47.95773797371132, 14.478868986855662], {name:'',size:0});
+p4 = b1.create('point', [45.47886898685566, 14.478868986855662], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
+
+
+p1 = b1.create('point', [57.47886898685566, 12.0], {name:'',size:0});
+p2 = b1.create('point', [59.47886898685566, 12.0], {name:'',size:0});
+p3 = b1.create('point', [59.47886898685566, 14.0], {name:'',size:0});
+p4 = b1.create('point', [57.47886898685566, 14.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [211.44180115967524, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [211.55053381570264, 60.37009606107009], {name:'',size:0});
-p3 = b1.create('point', [207.55201193761903, 60.478828717097485], {name:'',size:0});
-p4 = b1.create('point', [207.44327928159163, 56.48030683901388], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
+p1 = b1.create('point', [68.97886898685566, 12.0], {name:'',size:0});
+p2 = b1.create('point', [70.47886898685566, 12.0], {name:'',size:0});
+p3 = b1.create('point', [70.47886898685566, 13.5], {name:'',size:0});
+p4 = b1.create('point', [68.97886898685566, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [220.1028407040115, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [218.18764934411803, 55.79534327875676], {name:'',size:0});
-p3 = b1.create('point', [218.76388024834776, 53.88015191886329], {name:'',size:0});
-p4 = b1.create('point', [220.67907160824123, 54.45638282309303], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
+p1 = b1.create('point', [81.28402763599654, 12.0], {name:'',size:0});
+p2 = b1.create('point', [83.58918628513742, 12.0], {name:'',size:0});
+p3 = b1.create('point', [83.58918628513742, 14.305158649140884], {name:'',size:0});
+p4 = b1.create('point', [81.28402763599654, 14.305158649140884], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.35});
 
 
-p1 = b1.create('point', [238.85878207655588, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [247.8555591746775, 56.61240990856372], {name:'',size:0});
-p3 = b1.create('point', [247.61472344910027, 65.60918700668533], {name:'',size:0});
-p4 = b1.create('point', [238.61794635097866, 65.36835128110812], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.11});
+p1 = b1.create('point', [92.78402763599654, 12.0], {name:'',size:0});
+p2 = b1.create('point', [94.28402763599654, 12.0], {name:'',size:0});
+p3 = b1.create('point', [94.28402763599654, 13.5], {name:'',size:0});
+p4 = b1.create('point', [92.78402763599654, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [248.4881319685774, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [248.985195824495, 57.23928814688261], {name:'',size:0});
-p3 = b1.create('point', [248.1174818605989, 57.736352002800224], {name:'',size:0});
-p4 = b1.create('point', [247.62041800468128, 56.86863803890411], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
+p1 = b1.create('point', [104.28402763599654, 12.0], {name:'',size:0});
+p2 = b1.create('point', [105.78402763599654, 12.0], {name:'',size:0});
+p3 = b1.create('point', [105.78402763599654, 13.5], {name:'',size:0});
+p4 = b1.create('point', [104.28402763599654, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
 
 
-p1 = b1.create('point', [256.04848490521255, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [252.27679332216974, 55.03952966330856], {name:'',size:0});
-p3 = b1.create('point', [253.60883784184767, 51.26783808026575], {name:'',size:0});
-p4 = b1.create('point', [257.3805294248905, 52.59988259994368], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
+p1 = b1.create('point', [118.89434493427831, 12.0], {name:'',size:0});
+p2 = b1.create('point', [123.50466223256008, 12.0], {name:'',size:0});
+p3 = b1.create('point', [123.50466223256008, 16.610317298281768], {name:'',size:0});
+p4 = b1.create('point', [118.89434493427831, 16.610317298281768], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.51});
 
 
-p1 = b1.create('point', [260.695254291468, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [258.9328219526153, 59.962372457878345], {name:'',size:0});
-p3 = b1.create('point', [255.3420236777235, 58.19994011902566], {name:'',size:0});
-p4 = b1.create('point', [257.1044560165762, 54.609141844133816], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [272.0344382578678, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [272.47677141058045, 55.47472336929936], {name:'',size:0});
-p3 = b1.create('point', [273.3736222242676, 55.91705652201203], {name:'',size:0});
-p4 = b1.create('point', [272.93128907155494, 56.81390733569916], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [281.7326819520168, 56.37157418298649], {name:'',size:0});
-p2 = b1.create('point', [282.98794596223473, 57.92859449905547], {name:'',size:0});
-p3 = b1.create('point', [281.43092564616575, 59.18385850927342], {name:'',size:0});
-p4 = b1.create('point', [280.1756616359478, 57.62683819320444], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [21.561850369977662, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [23.52182426280267, 66.16496006966491], {name:'',size:0});
-p3 = b1.create('point', [23.12370073995532, 68.12493396248993], {name:'',size:0});
-p4 = b1.create('point', [21.163726847130313, 67.72681043964258], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [30.174253727509537, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [29.343912777573678, 66.32409223934984], {name:'',size:0});
-p3 = b1.create('point', [28.786657085041412, 65.49375128941398], {name:'',size:0});
-p4 = b1.create('point', [29.61699803497727, 64.93649559688171], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [40.96962242562009, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [37.854210254720854, 61.85605567780779], {name:'',size:0});
-p3 = b1.create('point', [41.76499112373064, 58.740643506908555], {name:'',size:0});
-p4 = b1.create('point', [44.88040329462987, 62.65142437591834], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.55});
-
-
-p1 = b1.create('point', [51.234314412548265, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [52.06127147561462, 66.32910162295575], {name:'',size:0});
-p3 = b1.create('point', [51.49900639947644, 67.1560586860221], {name:'',size:0});
-p4 = b1.create('point', [50.67204933641009, 66.59379360988393], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [59.629241695283106, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [57.662258947557085, 65.40492651635671], {name:'',size:0});
-p3 = b1.create('point', [58.02416897801795, 63.43794376863069], {name:'',size:0});
-p4 = b1.create('point', [59.99115172574397, 63.79985379909155], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [67.07314724894614, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [63.27188871965379, 64.52167246386219], {name:'',size:0});
-p3 = b1.create('point', [64.51705280260917, 60.720413934569834], {name:'',size:0});
-p4 = b1.create('point', [68.31831133190153, 61.96557801752522], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [76.71312483787173, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [77.21692352249482, 66.63065764251508], {name:'',size:0});
-p3 = b1.create('point', [76.35310242679732, 67.13445632713817], {name:'',size:0});
-p4 = b1.create('point', [75.84930374217423, 66.27063523144066], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
-
-
-p1 = b1.create('point', [89.25089302520075, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [91.14422339905691, 65.12239873334471], {name:'',size:0});
-p3 = b1.create('point', [91.78866121252977, 67.01572910720087], {name:'',size:0});
-p4 = b1.create('point', [89.89533083867362, 67.66016692067373], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
-
-
-p1 = b1.create('point', [89.5385941759011, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [80.56931786705803, 66.50985908727417], {name:'',size:0});
-p3 = b1.create('point', [79.82629532660144, 57.5405827784311], {name:'',size:0});
-p4 = b1.create('point', [88.7955716354445, 56.79756023797451], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.11});
-
-
-p1 = b1.create('point', [104.82938851453574, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [106.47384921405693, 62.12050290770413], {name:'',size:0});
-p3 = b1.create('point', [110.12018285317038, 63.764963607225326], {name:'',size:0});
-p4 = b1.create('point', [108.47572215364917, 67.41129724633876], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.45999999999999996});
-
-
-p1 = b1.create('point', [119.75990412843495, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [128.0922313865905, 69.16864819107391], {name:'',size:0});
-p3 = b1.create('point', [124.69041974233417, 77.50097544922946], {name:'',size:0});
-p4 = b1.create('point', [116.35809248417861, 74.09916380497312], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.11});
-
-
-p1 = b1.create('point', [131.7242473127053, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [134.58666861261938, 66.6649146624613], {name:'',size:0});
-p3 = b1.create('point', [133.68859049697565, 69.52733596237537], {name:'',size:0});
-p4 = b1.create('point', [130.82616919706157, 68.62925784673165], {name:'',size:0});
+p1 = b1.create('point', [131.8943449342783, 12.0], {name:'',size:0});
+p2 = b1.create('point', [134.8943449342783, 12.0], {name:'',size:0});
+p3 = b1.create('point', [134.8943449342783, 15.0], {name:'',size:0});
+p4 = b1.create('point', [131.8943449342783, 15.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
 
 
-p1 = b1.create('point', [126.00349374493447, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [112.36197591639173, 72.00454376450185], {name:'',size:0});
-p3 = b1.create('point', [110.28274017716365, 67.4573711549876], {name:'',size:0});
-p4 = b1.create('point', [123.92425800570639, 61.219663937303324], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 1.05});
+p1 = b1.create('point', [144.37321392113398, 12.0], {name:'',size:0});
+p2 = b1.create('point', [146.85208290798965, 12.0], {name:'',size:0});
+p3 = b1.create('point', [146.85208290798965, 14.478868986855662], {name:'',size:0});
+p4 = b1.create('point', [144.37321392113398, 14.478868986855662], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
 
 
-p1 = b1.create('point', [136.47152310560577, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [137.37279870146654, 66.20008278200703], {name:'',size:0});
-p3 = b1.create('point', [136.93955246627706, 67.10135837786778], {name:'',size:0});
-p4 = b1.create('point', [136.03827687041633, 66.66811214267832], {name:'',size:0});
-object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.31});
+p1 = b1.create('point', [156.37321392113398, 12.0], {name:'',size:0});
+p2 = b1.create('point', [158.37321392113398, 12.0], {name:'',size:0});
+p3 = b1.create('point', [158.37321392113398, 14.0], {name:'',size:0});
+p4 = b1.create('point', [156.37321392113398, 14.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 
-p1 = b1.create('point', [148.27620979491104, 65.76683654681757], {name:'',size:0});
-p2 = b1.create('point', [148.08961949219983, 63.775559554801106], {name:'',size:0});
-p3 = b1.create('point', [150.0808964842163, 63.5889692520899], {name:'',size:0});
-p4 = b1.create('point', [150.2674867869275, 65.58024624410636], {name:'',size:0});
+p1 = b1.create('point', [169.87321392113398, 12.0], {name:'',size:0});
+p2 = b1.create('point', [173.37321392113398, 12.0], {name:'',size:0});
+p3 = b1.create('point', [173.37321392113398, 15.5], {name:'',size:0});
+p4 = b1.create('point', [169.87321392113398, 15.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
+
+
+p1 = b1.create('point', [181.37321392113398, 12.0], {name:'',size:0});
+p2 = b1.create('point', [182.87321392113398, 12.0], {name:'',size:0});
+p3 = b1.create('point', [182.87321392113398, 13.5], {name:'',size:0});
+p4 = b1.create('point', [181.37321392113398, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [192.87321392113398, 12.0], {name:'',size:0});
+p2 = b1.create('point', [194.37321392113398, 12.0], {name:'',size:0});
+p3 = b1.create('point', [194.37321392113398, 13.5], {name:'',size:0});
+p4 = b1.create('point', [192.87321392113398, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [205.17837257027486, 12.0], {name:'',size:0});
+p2 = b1.create('point', [207.48353121941574, 12.0], {name:'',size:0});
+p3 = b1.create('point', [207.48353121941574, 14.305158649140884], {name:'',size:0});
+p4 = b1.create('point', [205.17837257027486, 14.305158649140884], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.35});
+
+
+p1 = b1.create('point', [218.17837257027486, 12.0], {name:'',size:0});
+p2 = b1.create('point', [221.17837257027486, 12.0], {name:'',size:0});
+p3 = b1.create('point', [221.17837257027486, 15.0], {name:'',size:0});
+p4 = b1.create('point', [218.17837257027486, 15.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
+
+
+p1 = b1.create('point', [232.17837257027486, 12.0], {name:'',size:0});
+p2 = b1.create('point', [236.17837257027486, 12.0], {name:'',size:0});
+p3 = b1.create('point', [236.17837257027486, 22.0], {name:'',size:0});
+p4 = b1.create('point', [232.17837257027486, 22.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.7});
+
+
+p1 = b1.create('point', [239.17837257027486, 12.0], {name:'',size:0});
+p2 = b1.create('point', [239.17837257027486, 17.0], {name:'',size:0});
+p3 = b1.create('point', [236.17837257027486, 17.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3], {fillColor: "purple",  fillOpacity: 0.38});
+
+
+p1 = b1.create('point', [250.67837257027486, 12.0], {name:'',size:0});
+p2 = b1.create('point', [252.17837257027486, 12.0], {name:'',size:0});
+p3 = b1.create('point', [252.17837257027486, 13.5], {name:'',size:0});
+p4 = b1.create('point', [250.67837257027486, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [260.67837257027486, 12.0], {name:'',size:0});
+p2 = b1.create('point', [263.67837257027486, 12.0], {name:'',size:0});
+p3 = b1.create('point', [263.67837257027486, 17.0], {name:'',size:0});
+p4 = b1.create('point', [257.67837257027486, 17.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.53});
+
+
+p1 = b1.create('point', [275.2886898685566, 12.0], {name:'',size:0});
+p2 = b1.create('point', [279.8990071668384, 12.0], {name:'',size:0});
+p3 = b1.create('point', [279.8990071668384, 16.610317298281768], {name:'',size:0});
+p4 = b1.create('point', [275.2886898685566, 16.610317298281768], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.51});
+
+
+p1 = b1.create('point', [286.7886898685566, 12.0], {name:'',size:0});
+p2 = b1.create('point', [288.2886898685566, 12.0], {name:'',size:0});
+p3 = b1.create('point', [288.2886898685566, 13.5], {name:'',size:0});
+p4 = b1.create('point', [286.7886898685566, 13.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [299.7886898685566, 12.0], {name:'',size:0});
+p2 = b1.create('point', [302.7886898685566, 12.0], {name:'',size:0});
+p3 = b1.create('point', [302.7886898685566, 15.0], {name:'',size:0});
+p4 = b1.create('point', [299.7886898685566, 15.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
+
+
+p1 = b1.create('point', [315.7886898685566, 12.0], {name:'',size:0});
+p2 = b1.create('point', [321.7886898685566, 12.0], {name:'',size:0});
+p3 = b1.create('point', [315.7886898685566, 22.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3], {fillColor: "purple",  fillOpacity: 0.6});
+
+
+p1 = b1.create('point', [23.5, 18.0], {name:'',size:0});
+p2 = b1.create('point', [27.0, 18.0], {name:'',size:0});
+p3 = b1.create('point', [27.0, 21.5], {name:'',size:0});
+p4 = b1.create('point', [23.5, 21.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.42});
+
+
+p1 = b1.create('point', [36.5, 18.0], {name:'',size:0});
+p2 = b1.create('point', [39.5, 18.0], {name:'',size:0});
+p3 = b1.create('point', [39.5, 21.0], {name:'',size:0});
+p4 = b1.create('point', [36.5, 21.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
+
+
+p1 = b1.create('point', [48.0, 18.0], {name:'',size:0});
+p2 = b1.create('point', [49.5, 18.0], {name:'',size:0});
+p3 = b1.create('point', [49.5, 19.5], {name:'',size:0});
+p4 = b1.create('point', [48.0, 19.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [60.47886898685566, 18.0], {name:'',size:0});
+p2 = b1.create('point', [62.95773797371132, 18.0], {name:'',size:0});
+p3 = b1.create('point', [62.95773797371132, 20.478868986855662], {name:'',size:0});
+p4 = b1.create('point', [60.47886898685566, 20.478868986855662], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
+
+
+p1 = b1.create('point', [75.08918628513743, 18.0], {name:'',size:0});
+p2 = b1.create('point', [79.6995035834192, 18.0], {name:'',size:0});
+p3 = b1.create('point', [79.6995035834192, 22.610317298281768], {name:'',size:0});
+p4 = b1.create('point', [75.08918628513743, 22.610317298281768], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.51});
+
+
+p1 = b1.create('point', [86.58918628513743, 18.0], {name:'',size:0});
+p2 = b1.create('point', [88.08918628513743, 18.0], {name:'',size:0});
+p3 = b1.create('point', [88.08918628513743, 19.5], {name:'',size:0});
+p4 = b1.create('point', [86.58918628513743, 19.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [98.58918628513743, 18.0], {name:'',size:0});
+p2 = b1.create('point', [100.58918628513743, 18.0], {name:'',size:0});
+p3 = b1.create('point', [100.58918628513743, 20.0], {name:'',size:0});
+p4 = b1.create('point', [98.58918628513743, 20.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
+
+
+p1 = b1.create('point', [110.58918628513743, 18.0], {name:'',size:0});
+p2 = b1.create('point', [112.58918628513743, 18.0], {name:'',size:0});
+p3 = b1.create('point', [112.58918628513743, 20.0], {name:'',size:0});
+p4 = b1.create('point', [110.58918628513743, 20.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
+
+
+p1 = b1.create('point', [123.06805527199309, 18.0], {name:'',size:0});
+p2 = b1.create('point', [125.54692425884875, 18.0], {name:'',size:0});
+p3 = b1.create('point', [125.54692425884875, 20.478868986855662], {name:'',size:0});
+p4 = b1.create('point', [123.06805527199309, 20.478868986855662], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
+
+
+p1 = b1.create('point', [136.0680552719931, 18.0], {name:'',size:0});
+p2 = b1.create('point', [139.0680552719931, 18.0], {name:'',size:0});
+p3 = b1.create('point', [139.0680552719931, 21.0], {name:'',size:0});
+p4 = b1.create('point', [136.0680552719931, 21.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
+
+
+p1 = b1.create('point', [149.0680552719931, 18.0], {name:'',size:0});
+p2 = b1.create('point', [152.0680552719931, 18.0], {name:'',size:0});
+p3 = b1.create('point', [152.0680552719931, 21.0], {name:'',size:0});
+p4 = b1.create('point', [149.0680552719931, 21.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
+
+
+p1 = b1.create('point', [160.5680552719931, 18.0], {name:'',size:0});
+p2 = b1.create('point', [162.0680552719931, 18.0], {name:'',size:0});
+p3 = b1.create('point', [162.0680552719931, 19.5], {name:'',size:0});
+p4 = b1.create('point', [160.5680552719931, 19.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [172.5680552719931, 18.0], {name:'',size:0});
+p2 = b1.create('point', [174.5680552719931, 18.0], {name:'',size:0});
+p3 = b1.create('point', [174.5680552719931, 20.0], {name:'',size:0});
+p4 = b1.create('point', [172.5680552719931, 20.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
+
+
+p1 = b1.create('point', [184.87321392113398, 18.0], {name:'',size:0});
+p2 = b1.create('point', [187.17837257027486, 18.0], {name:'',size:0});
+p3 = b1.create('point', [187.17837257027486, 20.305158649140882], {name:'',size:0});
+p4 = b1.create('point', [184.87321392113398, 20.305158649140882], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.35});
+
+
+p1 = b1.create('point', [199.48353121941574, 18.0], {name:'',size:0});
+p2 = b1.create('point', [204.0938485176975, 18.0], {name:'',size:0});
+p3 = b1.create('point', [204.0938485176975, 22.610317298281768], {name:'',size:0});
+p4 = b1.create('point', [199.48353121941574, 22.610317298281768], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.51});
+
+
+p1 = b1.create('point', [212.48353121941574, 18.0], {name:'',size:0});
+p2 = b1.create('point', [215.48353121941574, 18.0], {name:'',size:0});
+p3 = b1.create('point', [215.48353121941574, 21.0], {name:'',size:0});
+p4 = b1.create('point', [212.48353121941574, 21.0], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.39});
+
+
+p1 = b1.create('point', [224.78868986855662, 18.0], {name:'',size:0});
+p2 = b1.create('point', [227.0938485176975, 18.0], {name:'',size:0});
+p3 = b1.create('point', [227.0938485176975, 20.305158649140882], {name:'',size:0});
+p4 = b1.create('point', [224.78868986855662, 20.305158649140882], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.35});
+
+
+p1 = b1.create('point', [236.28868986855662, 18.0], {name:'',size:0});
+p2 = b1.create('point', [237.78868986855662, 18.0], {name:'',size:0});
+p3 = b1.create('point', [237.78868986855662, 19.5], {name:'',size:0});
+p4 = b1.create('point', [236.28868986855662, 19.5], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.32});
+
+
+p1 = b1.create('point', [248.7675588554123, 18.0], {name:'',size:0});
+p2 = b1.create('point', [251.24642784226796, 18.0], {name:'',size:0});
+p3 = b1.create('point', [251.24642784226796, 20.478868986855662], {name:'',size:0});
+p4 = b1.create('point', [248.7675588554123, 20.478868986855662], {name:'',size:0});
+object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.36});
+
+
+p1 = b1.create('point', [260.7675588554123, 18.0], {name:'',size:0});
+p2 = b1.create('point', [262.7675588554123, 18.0], {name:'',size:0});
+p3 = b1.create('point', [262.7675588554123, 20.0], {name:'',size:0});
+p4 = b1.create('point', [260.7675588554123, 20.0], {name:'',size:0});
 object = b1.create('polygon',[p1,p2,p3,p4], {fillColor: "purple",  fillOpacity: 0.33999999999999997});
 
 

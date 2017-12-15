@@ -11,7 +11,7 @@ public class Parse {
 
 
     public static String readFile () throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem17.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("./Problems/problem1.txt"));
         StringBuilder sb = new StringBuilder();
         String line = br.readLine();
         String everything = new String();
@@ -167,6 +167,12 @@ public class Parse {
                 "<script type=\"text/javascript\" src=\"jsxgraphcore.js\"></script>\n" +
                 "</head>\n" +
                 "<body onload=\"myFunction()\">\n" +
+                "<form action=\"visualise.html\">\n" +
+                "    <input type=\"submit\" value=\"Go to Solution\" />\n" +
+                "</form>" +
+                "<form action=\"index.html\">\n" +
+                "    <input type=\"submit\" value=\"Go to Initial Problem\" />\n" +
+                "</form>" +
                 "\n" +
                 "<jsxgraph box=\"jxgbox\" width=\"1000\" height=\"1000\" ></jsxgraph>\n" +
                 "\n" +

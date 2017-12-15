@@ -4,9 +4,9 @@ import java.util.Comparator;
 
 public class Solver {
 
-    public static final double ROTATION_ANGLE = 32;
+    public static final double ROTATION_ANGLE = 360;
     public static final double PRECISE_ROTATION_ANGLE = 0.1;
-    public static final double OFFSET_VALUE = 0.8;
+    public static final double OFFSET_VALUE = 10;
     public static final double PRECISE_OFFSET_VALUE = 0.01;
     public static final int PERCENTAGE_BREAKPOINT = 100;
     public static final double SCORE_BREAKPOINT = 999999;
@@ -38,12 +38,55 @@ public class Solver {
         double coveredArea = 0;
         double roomValue = 0;
 
+//        Point p1 = new Point(27.4630428460, -34.9110480742);
+//        Point p2 = new Point(2.6496899282, -37.9602310752);
+//        Point p3 = new Point(3.2595265284, -42.9229016588);
+//        Point p4 = new Point(28.0728794462, -39.8737186578);
+//
+//        ArrayList<Point> coordinates = new ArrayList<>();
+//        coordinates.add(p1);
+//        coordinates.add(p2);
+//        coordinates.add(p3);
+//        coordinates.add(p4);
+//
+//        furnitureInRoom.add(new FurnitureObject(coordinates, 1));
+//
+//        p1 = new Point(21.9745134441, 9.7529871780);
+//        p2 = new Point(28.8046833665, -45.8289233580);
+//        p3 = new Point(35.7524221835, -44.9751521177);
+//        p4 = new Point(28.9222522611, 10.6067584183);
+//
+//        coordinates = new ArrayList<>();
+//        coordinates.add(p1);
+//        coordinates.add(p2);
+//        coordinates.add(p3);
+//        coordinates.add(p4);
+//
+//        furnitureInRoom.add(new FurnitureObject(coordinates, 1));
+//
+//        p1 = new Point(-0.2384563015, -3.5976573756);
+//        p2 = new Point(3.2507453082, -9.6660568456);
+//        p3 = new Point(4.1176595182, -9.1675994727);
+//        p4 = new Point(0.6284579085, -3.0992000028);
+//
+//        coordinates = new ArrayList<>();
+//        coordinates.add(p1);
+//        coordinates.add(p2);
+//        coordinates.add(p3);
+//        coordinates.add(p4);
+//
+//        furnitureInRoom.add(new FurnitureObject(coordinates, 1));
+
         for (FurnitureObject furnitureObject : furniture) {
             if (coveredArea*100/room.area() > PERCENTAGE_BREAKPOINT) {
                 System.out.println();
                 System.out.println("Covered "+ PERCENTAGE_BREAKPOINT + "% ... BREAKING ... ");
                 System.out.println();
                 break;
+            }
+            if(furnitureObject.coordinates.size() >0) {
+                furnitureObject.displayCoordinates();
+                System.out.println(furnitureObject.totalCost);
             }
 
             counter++;
@@ -84,46 +127,46 @@ public class Solver {
                 if (isInValidPosition(furnitureObject)) {
                     boolean ok = false;
 
-                    do {
-                        int countLoops = 0;
-                        ok = false;
-
-                        while(isInValidPosition(furnitureObject)) {
-                            countLoops++;
-                            furnitureObject.translateY(-PRECISE_OFFSET_VALUE);
-                        }
-                        if(countLoops > 1) {
-                            ok = true;
-                        }
-                        if(countLoops >= 1) {
-                            furnitureObject.translateY(PRECISE_OFFSET_VALUE);
-                        }
-
-                        countLoops = 0;
-                        while(isInValidPosition(furnitureObject)) {
-                            countLoops++;
-                            furnitureObject.rotate(PRECISE_ROTATION_ANGLE);
-                        }
-                        if(countLoops > 1) {
-                            ok = true;
-                        }
-                        if(countLoops >= 1) {
-                            furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
-                        }
-
-                        countLoops = 0;
-                        while(isInValidPosition(furnitureObject)) {
-                            countLoops++;
-                            furnitureObject.translateX(-PRECISE_OFFSET_VALUE);
-                        }
-                        if(countLoops > 1) {
-                            ok = true;
-                        }
-                        if(countLoops >= 1) {
-                            furnitureObject.translateX(PRECISE_OFFSET_VALUE);
-                        }
-
-                    } while(ok);
+//                    do {
+//                        int countLoops = 0;
+//                        ok = false;
+//
+//                        while(isInValidPosition(furnitureObject)) {
+//                            countLoops++;
+//                            furnitureObject.translateY(-PRECISE_OFFSET_VALUE);
+//                        }
+//                        if(countLoops > 1) {
+//                            ok = true;
+//                        }
+//                        if(countLoops >= 1) {
+//                            furnitureObject.translateY(PRECISE_OFFSET_VALUE);
+//                        }
+//
+//                        countLoops = 0;
+//                        while(isInValidPosition(furnitureObject)) {
+//                            countLoops++;
+//                            furnitureObject.rotate(-PRECISE_ROTATION_ANGLE);
+//                        }
+//                        if(countLoops > 1) {
+//                            ok = true;
+//                        }
+//                        if(countLoops >= 1) {
+//                            furnitureObject.rotate(PRECISE_ROTATION_ANGLE);
+//                        }
+//
+//                        countLoops = 0;
+//                        while(isInValidPosition(furnitureObject)) {
+//                            countLoops++;
+//                            furnitureObject.translateX(-PRECISE_OFFSET_VALUE);
+//                        }
+//                        if(countLoops > 1) {
+//                            ok = true;
+//                        }
+//                        if(countLoops >= 1) {
+//                            furnitureObject.translateX(PRECISE_OFFSET_VALUE);
+//                        }
+//
+//                    } while(ok);
 
                     furnitureInRoom.add(furnitureObject);
                     coveredArea += furnitureObject.area;
